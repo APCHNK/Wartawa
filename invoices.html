@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="r">
+
+<head>
+	<title>Вывод средств</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="page">
+			<aside data-simplebar class="sidebar">
+				<a href="#" class="sidebar__logo">
+					<img src="img/logo.svg" alt="Логотип">
+				</a>
+				<div class="sidebar__status"><span></span>Верифицирован</div>
+				<nav class="sidebar__menu menu-sidebar">
+					<ul class="menu-sidebar__list">
+						<li><a class="_active" href="#"><img src="img/font-icons/infopanel.svg" alt="">Инфопанель</a></li>
+						<li><a href="#"><img src="img/font-icons/list.svg" alt="">Список мерчантов</a></li>
+						<li><a href="#"><img src="img/font-icons/history.svg" alt="">История платежей</a></li>
+						<li><a href="#"><img src="img/font-icons/balances.svg" alt="">Балансы</a></li>
+						<li><a href="#"><img src="img/font-icons/return.svg" alt="">Вывод средств</a></li>
+						<li><a href="#"><img src="img/font-icons/invoices.svg" alt="">Инвойсы</a></li>
+						<li><a href="#"><img src="img/font-icons/api.svg" alt="">Документация API</a></li>
+						<li><a href="#"><img src="img/font-icons/employees.svg" alt="">Сотрудники</a></li>
+					</ul>
+				</nav>
+			</aside>
+			<main class="main">
+				<header class="header">
+					<div class="header__container">
+						<h1 class="header__title">Вывод средств</h1>
+						<div class="header__user user-header">
+							<div class="user-header__avatar">BJ</div>
+							<div class="user-header__content">
+								<div class="user-header__name">Boris Johnson</div>
+								<div class="user-header__dropdown">
+									<img src="img/font-icons/menu-arrow.svg" alt="Открыть меню">
+								</div>
+							</div>
+						</div>
+					</div>
+				</header>
+				<div class="main__container">
+					<div class="breadcrumbs">
+						<ul>
+							<li><a href="#">Главная</a></li>
+							<li><a href="#" class="_active">История платежей</a></li>
+						</ul>
+					</div>
+					<div data-tabs class="invoices">
+						<nav data-tabs-titles class="list-merchants__nav invoices__nav">
+							<button data-tabs-title type="button" class="list-merchants__list list-merchants__button button _tab-active invoices__list">Список</button>
+							<button data-tabs-title type="button" class="list-merchants__add list-merchants__button button invoices__add">
+								<img src="img/font-icons/add.svg" alt="">
+								Добавить мерчанта
+							</button>
+						</nav>
+						<div data-tabs-body class="invoices__body">
+							<div data-tabs-item class="invoices__block invoices__block-f">
+								<div data-da=".invoices, 768, first" class="invoices__title">История инвойсов</div>
+								<div class="invoices__filter filter-invoices">
+									<button type="button" class="filter-invoices__open"><span>Фильтр</span></button>
+									<div class="filter-invoices__form"></div>
+								</div>
+								<form action="#" class="invoices__search search-invoices">
+									<div data-da=".filter-invoices__form, 768" class="search-invoices__inputs">
+										<div class="search-invoices__date">
+											<div class="search-invoices__column">
+												<div class="search-invoices__input">
+													<div class="search-invoices__label">Создан</div>
+													<div class="search-invoices__date-values">
+														<input type="text" name="ot" placeholder="От" class="input input-data">
+														<input type="text" name="ot" placeholder="До" class="input input-data">
+													</div>
+												</div>
+											</div>
+											<div class="search-invoices__column">
+												<div class="search-invoices__input">
+													<div class="search-invoices__label">Срок действия</div>
+													<div class="search-invoices__date-values">
+														<input type="text" name="ot" placeholder="От" class="input input-data">
+														<input type="text" name="ot" placeholder="До" class="input input-data">
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="search-invoices__input">
+											<div class="search-invoices__label">Email получателя</div>
+											<input type="text" name="ot" placeholder="Email" class="input">
+										</div>
+										<div class="search-invoices__input">
+											<div class="search-invoices__label">Статус</div>
+											<select name="status">
+												<option value="1" selected>Пункт №1</option>
+												<option value="2">Пункт №2</option>
+												<option value="3">Пункт №3</option>
+												<option value="4">Пункт №4</option>
+											</select>
+										</div>
+										<div class="search-invoices__input">
+											<div class="search-invoices__label">Сумма</div>
+											<input type="text" name="suma" placeholder="Сумма" class="input">
+										</div>
+										<div class="search-invoices__input">
+											<div class="search-invoices__label">Назначение</div>
+											<input type="text" name="purpose" placeholder="Назначение" class="input">
+										</div>
+									</div>
+									<button data-da=".search-invoices__inputs, 768" type="submit" class="search-invoices__button button"><img src="img/font-icons/search.svg" alt=""><span>Поиск</span></button>
+								</form>
+								<div class="invoices__result">Не найдено</div>
+							</div>
+							<form action="#" data-tabs-item class="invoices__block">
+								<div class="invoice__create create-invoices">
+									<div class="create-invoices__title">Создать инвойс</div>
+									<div class="create-invoices__content">
+										<div class="create-invoices__grid">
+											<div class="merchants-information__input">
+												<div class="merchants-information__label">ID мерчанта</div>
+												<select name="id">
+													<option data-asset="1522987 Activated" data-asset="Activated" value="1" selected>cryptoinvestor.com.ua</option>
+													<option data-asset="1522987" value="1">cryptoinvestor.com.ua</option>
+													<option data-asset="1522987" value="2">cryptoinvestor.com.ua</option>
+													<option data-asset="1522987" value="3">cryptoinvestor.com.ua</option>
+												</select>
+											</div>
+											<div class="create-invoices__date">
+												<div class="merchants-information__input">
+													<div class="merchants-information__label">Сумма</div>
+													<div class="create-invoices__date-row">
+														<input type="number" name="sum" placeholder="0.00" class="input input-date">
+														<select name="currency">
+															<option value="1" selected>UAH</option>
+															<option value="2">EUR</option>
+															<option value="3">USD</option>
+														</select>
+													</div>
+												</div>
+												<div class="merchants-information__input create-invoices__currency">
+													<div class="merchants-information__label">Валюта</div>
+													<select name="currency">
+														<option value="1" selected>UAH</option>
+														<option value="2">EUR</option>
+														<option value="3">USD</option>
+													</select>
+												</div>
+											</div>
+											<div class="merchants-information__input">
+												<div class="merchants-information__label">Получатель</div>
+												<input type="text" name="web-saite" placeholder="+ добавить Email" class="input">
+											</div>
+											<div class="merchants-information__input">
+												<div class="merchants-information__label">Имя плательщика</div>
+												<input type="text" name="web-saite" placeholder="Имя" class="input">
+											</div>
+											<div class="create-invoices__meta">
+												<span>Вы можете кастомизировать внешний вид инвойса, добавив информаию про проект. <strong>Добавить логотип и контакты.</strong></span>
+											</div>
+											<div class="merchants-information__input">
+												<div class="merchants-information__label">Номер телефона</div>
+												<div class="merchants-information__phone">
+													<div class="merchants-information__country">
+														<select name="country-number">
+															<option data-asset="img/font-icons/country.svg" value="1" selected>+44</option>
+															<option data-asset="img/font-icons/country.svg" value="2">+48</option>
+															<option data-asset="img/font-icons/country.svg" value="3">+3</option>
+															<option data-asset="img/font-icons/country.svg" value="4">+380</option>
+														</select>
+													</div>
+													<input type="tel" name="form[]" placeholder="Номер телефона">
+												</div>
+											</div>
+										</div>
+										<div class="merchants-information__input textarea-purpose">
+											<div class="merchants-information__label">Назначение</div>
+											<textarea name="purpose" id="purpose" cols="30" rows="0" placeholder="Назначение" class="input"></textarea>
+										</div>
+										<div class="create-invoices__line">
+											<div class="create-invoices__checkbox">
+												<input id="c_4" class="create-invoices-checkbox__input" type="checkbox" value="1" name="preauthorization">
+												<label for="c_4" class="create-invoices-checkbox__label"><span class="create-invoices-checkbox__text">Предавторизация</span></label>
+											</div>
+											<div class="merchants-information__input">
+												<div class="merchants-information__label">Срок действия</div>
+												<input type="text" name="web-saite" placeholder="Срок действия" class="input">
+											</div>
+											<div class="merchants-information__input">
+												<div class="merchants-information__label">Язык Email сообщения</div>
+												<select name="lang">
+													<option value="1" selected>Український</option>
+													<option value="2">Англійський</option>
+												</select>
+											</div>
+										</div>
+										<div class="merchants-information__input create-invoices__textarea">
+											<div class="merchants-information__label">Сайт</div>
+											<textarea name="additionaldata" id="additionaldata" cols="30" rows="0" placeholder="Введите дополнительные данные..." class="input"></textarea>
+										</div>
+										<button type="submit" class="create-invoices__button button button-green">Создать инвойс</button>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+				<div class="nav">
+					<a href="#" class="nav__item icon-menu">
+						<img src="img/font-icons/wartawa.svg" alt="">
+						<p>Wartawa</p>
+					</a>
+					<a href="#" class="nav__item">
+						<img src="img/font-icons/payment.svg" alt="">
+						<p>Платежи</p>
+					</a>
+					<a href="#" class="nav__item">
+						<img src="img/font-icons/merchans.svg" alt="">
+						<p>Мои мерчанты</p>
+					</a>
+					<a href="#" class="nav__item">
+						<img src="img/font-icons/nav-balances.svg" alt="">
+						<p>Балансы</p>
+					</a>
+					<a href="#" class="nav__item">
+						<img src="img/font-icons/nav-invoices.svg" alt="">
+						<p>Инвойсы</p>
+					</a>
+				</div>
+			</main>
+		</div>
+	</div>
+	<script src="js/app.js"></script>
+</body>
+
+</html>

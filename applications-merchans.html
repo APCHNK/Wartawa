@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="r">
+
+<head>
+	<title>Заявки на мерчант</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="page">
+			<aside data-simplebar class="sidebar _admin">
+				<a href="#" class="sidebar__logo">
+					<img src="img/logo.svg" alt="Логотип">
+				</a>
+				<div class="sidebar__status"><span></span>Верифицирован</div>
+				<nav class="sidebar__menu menu-sidebar _admin">
+					<ul class="menu-sidebar__list _admin">
+						<li><a class="_active" href="#"><img src="img/font-icons/infopanel.svg" alt="">Инфопанель</a></li>
+						<li><a href="#"><img src="img/font-icons/list.svg" alt="">Список мерчантов</a></li>
+						<li><a href="#"><img src="img/font-icons/history.svg" alt="">История платежей</a></li>
+						<li><a href="#"><img src="img/font-icons/balances.svg" alt="">Балансы</a></li>
+						<li><a href="#"><img src="img/font-icons/return.svg" alt="">Вывод средств</a></li>
+						<li><a href="#"><img src="img/font-icons/invoices.svg" alt="">Инвойсы</a></li>
+						<li><a href="#"><img src="img/font-icons/api.svg" alt="">Документация API</a></li>
+						<li><a href="#"><img src="img/font-icons/employees.svg" alt="">Сотрудники</a></li>
+					</ul>
+				</nav>
+			</aside>
+			<main class="main">
+				<header class="header">
+					<div class="header__container">
+						<h1 class="header__title">Заявки на мерчант</h1>
+						<div class="header__user user-header">
+							<div class="user-header__avatar">BJ</div>
+							<div class="user-header__content">
+								<div class="user-header__name">Boris Johnson</div>
+								<div class="user-header__dropdown">
+									<img src="img/font-icons/menu-arrow.svg" alt="Открыть меню">
+								</div>
+							</div>
+						</div>
+					</div>
+				</header>
+				<div class="main__container">
+					<div class="breadcrumbs">
+						<ul>
+							<li><a href="#">Главная</a></li>
+                     <li><a href="#">Список мерчантов</a></li>
+							<li><a href="#" class="_active">Заявки на мерчант</a></li>
+						</ul>
+					</div>
+					<div class="applications-merchans">
+                  <div class="applications-merchans__inputs">
+                     <div class="merchants-information__input">
+                        <div class="merchants-information__label">Сайт</div>
+                        <input type="text" name="web-saite" placeholder="Сайт" class="input">
+                     </div>
+                     <div class="merchants-information__input">
+                        <div class="merchants-information__label">Название компании</div>
+                        <input type="text" name="name-company" placeholder="Название компании" class="input">
+                     </div>
+                     <div class="merchants-information__input">
+                        <div class="merchants-information__label">Страна</div>
+                        <input type="text" name="cohntry" placeholder="Страна" class="input">
+                     </div>
+                     <div class="merchants-information__input">
+                        <div class="merchants-information__label">Email</div>
+                        <input type="email" name="email" placeholder="Email" class="input">
+                     </div>
+                     <div class="merchants-information__input">
+                        <div class="merchants-information__label">Тип</div>
+                        <input type="text" name="type" placeholder="Тип" class="input">
+                     </div>
+                     <div class="merchants-information__input">
+                        <div class="merchants-information__label">Номер телефона плательщика</div>
+                        <div class="merchants-information__phone">
+                           <div class="merchants-information__country">
+                              <select name="country-number">
+                                 <option data-asset="img/font-icons/country.svg" value="1" selected>+44</option>
+                                 <option data-asset="img/font-icons/country.svg" value="2">+48</option>
+                                 <option data-asset="img/font-icons/country.svg" value="3">+3</option>
+                                 <option data-asset="img/font-icons/country.svg" value="4">+380</option>
+                              </select>
+                           </div>
+                           <input type="tel" name="phone-number" placeholder="Номер телефона">
+                        </div>
+                     </div>
+                  </div>
+                  <div class="applications-merchans__actions">
+                     <a href="#" class="applications-merchans__button _yellow">Посмотреть документы</a>
+                     <a href="#" class="applications-merchans__button _green">Одобрить</a>
+                     <a href="#" class="applications-merchans__button _red">Отказать</a>
+                  </div>
+               </div>
+				</div>
+				<div class="nav">
+					<a href="#" class="nav__item icon-menu">
+						<img src="img/font-icons/wartawa.svg" alt="">
+						<p>Wartawa</p>
+					</a>
+					<a href="#" class="nav__item">
+						<img src="img/font-icons/payment.svg" alt="">
+						<p>Платежи</p>
+					</a>
+					<a href="#" class="nav__item">
+						<img src="img/font-icons/merchans.svg" alt="">
+						<p>Мои мерчанты</p>
+					</a>
+					<a href="#" class="nav__item">
+						<img src="img/font-icons/nav-balances.svg" alt="">
+						<p>Балансы</p>
+					</a>
+					<a href="#" class="nav__item">
+						<img src="img/font-icons/nav-invoices.svg" alt="">
+						<p>Инвойсы</p>
+					</a>
+				</div>
+			</main>
+		</div>
+	</div>
+	<script src="js/app.js"></script>
+</body>
+
+</html>

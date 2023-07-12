@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="r">
+
+<head>
+   <title>Заявки на вывод</title>
+   <meta charset="UTF-8">
+   <meta name="format-detection" content="telephone=no">
+   <link rel="stylesheet" href="css/style.css">
+   <link rel="shortcut icon" href="favicon.ico">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body class="_desctop">
+   <div class="wrapper">
+      <div class="page">
+         <aside data-simplebar class="sidebar _admin">
+            <a href="#" class="sidebar__logo">
+               <img src="img/logo.svg" alt="Логотип">
+            </a>
+            <div class="sidebar__status"><span></span>Верифицирован</div>
+            <nav class="sidebar__menu menu-sidebar _admin">
+               <ul class="menu-sidebar__list _admin">
+                  <li><a class="_active" href="#"><img src="img/font-icons/infopanel.svg" alt="">Инфопанель</a></li>
+                  <li><a href="#"><img src="img/font-icons/list.svg" alt="">Список мерчантов</a></li>
+                  <li><a href="#"><img src="img/font-icons/history.svg" alt="">История платежей</a></li>
+                  <li><a href="#"><img src="img/font-icons/balances.svg" alt="">Балансы</a></li>
+                  <li><a href="#"><img src="img/font-icons/return.svg" alt="">Вывод средств</a></li>
+                  <li><a href="#"><img src="img/font-icons/invoices.svg" alt="">Инвойсы</a></li>
+                  <li><a href="#"><img src="img/font-icons/api.svg" alt="">Документация API</a></li>
+                  <li><a href="#"><img src="img/font-icons/employees.svg" alt="">Сотрудники</a></li>
+               </ul>
+            </nav>
+         </aside>
+         <main class="main">
+            <header class="header">
+               <div class="header__container">
+                  <h1 class="header__title">Заявки на вывод</h1>
+                  <div class="header__user user-header">
+                     <div class="user-header__avatar">BJ</div>
+                     <div class="user-header__content">
+                        <div class="user-header__name">Boris Johnson</div>
+                        <div class="user-header__dropdown">
+                           <img src="img/font-icons/menu-arrow.svg" alt="Открыть меню">
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </header>
+            <div class="main__container">
+               <div class="breadcrumbs">
+                  <ul>
+                     <li><a href="#">Главная</a></li>
+                     <li><a href="#">Список мерчантов</a></li>
+                     <li><a href="#" class="_active">Заявки на мерчант</a></li>
+                  </ul>
+               </div>
+               <div class="requests-merchans">
+                  <div class="requests-merchans__header">
+                     <form action="#" class="requests-merchans__search">
+                        <input type="text" name="search" placeholder="Имя мерчнта, сайта..." class="input">
+                        <button type="submit" class="requests-merchans__button">
+                           <img src="./img/font-icons/search.svg" alt="">
+                        </button>
+                     </form>
+                  </div>
+                  <div class="requests-merchans__content">
+                     <div class="requests-merchans__head">
+                        <div class="requests-merchans__label">Имя мерчанта</div>
+                        <div class="requests-merchans__label">Сайт</div>
+                        <div class="requests-merchans__label">Статус</div>
+                        <div class="requests-merchans__label">Дата создания</div>
+                        <div class="requests-merchans__label">Сумма / Кошелек</div>
+                        <div class="requests-merchans__label requests-merchans__label-last">Действия</div>
+                     </div>
+                     <div class="requests-merchans__items">
+                        <div class="requests-merchans__item">test-merch (1934923)</div>
+                        <div class="requests-merchans__item">https://test.com</div>
+                        <div class="requests-merchans__item">На рассмотрении</div>
+                        <div class="requests-merchans__item">09.05.2023</div>
+                        <div class="requests-merchans__item">
+                           <p class="requests-merchans__suma">2000 <span>USD</span></p>
+                           <p>Tether TRC-20</p> 
+                           <p class="requests-merchans__copy">
+                              <span class="equests-merchans__cod">1522987_6fee2a0d1aa0f6b4q2f1c</span>
+                              <button type="button">
+                                 <img src="./img/font-icons/copy.svg" alt="">
+                                 <span class="cop">Скопировано</span>
+                              </button>
+                           </p>
+                        </div>
+                        <div class="requests-merchans__item requests-merchans__item-last">
+                           <button type="submit" class="requests-merchans__action _approve">Одобрить</button>
+                           <button type="submit" class="requests-merchans__action">Отказать</button>
+                        </div>
+                     </div>
+                     <div class="requests-merchans__items">
+                        <div class="requests-merchans__item">test-merch (1934923)</div>
+                        <div class="requests-merchans__item">https://test.com</div>
+                        <div class="requests-merchans__item">На рассмотрении</div>
+                        <div class="requests-merchans__item">09.05.2023</div>
+                        <div class="requests-merchans__item">
+                           <p class="requests-merchans__suma">2000 <span>USD</span></p>
+                           <p>Tether TRC-20</p> 
+                           <p class="requests-merchans__copy">
+                              <span class="equests-merchans__cod">1522987_6fee2a0d1aa0f6b4q2f1c</span>
+                              <button type="button">
+                                 <img src="./img/font-icons/copy.svg" alt="">
+                                 <span class="cop">Скопировано</span>
+                              </button>
+                           </p>
+                        </div>
+                        <div class="requests-merchans__item requests-merchans__item-last">
+                           <button type="submit" class="requests-merchans__action _approve">Одобрить</button>
+                           <button type="submit" class="requests-merchans__action">Отказать</button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="nav">
+               <a href="#" class="nav__item icon-menu">
+                  <img src="img/font-icons/wartawa.svg" alt="">
+                  <p>Wartawa</p>
+               </a>
+               <a href="#" class="nav__item">
+                  <img src="img/font-icons/payment.svg" alt="">
+                  <p>Платежи</p>
+               </a>
+               <a href="#" class="nav__item">
+                  <img src="img/font-icons/merchans.svg" alt="">
+                  <p>Мои мерчанты</p>
+               </a>
+               <a href="#" class="nav__item">
+                  <img src="img/font-icons/nav-balances.svg" alt="">
+                  <p>Балансы</p>
+               </a>
+               <a href="#" class="nav__item">
+                  <img src="img/font-icons/nav-invoices.svg" alt="">
+                  <p>Инвойсы</p>
+               </a>
+            </div>
+         </main>
+      </div>
+   </div>
+   <script src="js/app.js"></script>
+</body>
+
+</html>

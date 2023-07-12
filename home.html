@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="r">
+
+<head>
+	<title>Инфопанель</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="page">
+			<aside data-simplebar class="sidebar">
+				<a href="#" class="sidebar__logo">
+					<img src="img/logo.svg" alt="Логотип">
+				</a>
+				<div class="sidebar__status"><span></span>Верифицирован</div>
+				<nav class="sidebar__menu menu-sidebar">
+					<ul class="menu-sidebar__list">
+						<li><a class="_active" href="#"><img src="img/font-icons/infopanel.svg" alt="">Инфопанель</a></li>
+						<li><a href="#"><img src="img/font-icons/list.svg" alt="">Список мерчантов</a></li>
+						<li><a href="#"><img src="img/font-icons/history.svg" alt="">История платежей</a></li>
+						<li><a href="#"><img src="img/font-icons/balances.svg" alt="">Балансы</a></li>
+						<li><a href="#"><img src="img/font-icons/return.svg" alt="">Вывод средств</a></li>
+						<li><a href="#"><img src="img/font-icons/invoices.svg" alt="">Инвойсы</a></li>
+						<li><a href="#"><img src="img/font-icons/api.svg" alt="">Документация API</a></li>
+						<li><a href="#"><img src="img/font-icons/employees.svg" alt="">Сотрудники</a></li>
+					</ul>
+				</nav>
+			</aside>
+			<main class="main">
+				<header class="header">
+					<div class="header__container">
+						<h1 class="header__title">Инфопанель</h1>
+						<div class="header__user user-header">
+							<div class="user-header__avatar">BJ</div>
+							<div class="user-header__content">
+								<div class="user-header__name">Boris Johnson</div>
+								<div class="user-header__dropdown">
+									<img src="img/font-icons/menu-arrow.svg" alt="Открыть меню">
+								</div>
+							</div>
+						</div>
+					</div>
+				</header>
+				<div class="main__container">
+					<div class="breadcrumbs">
+						<ul>
+							<li><a href="#">Главная</a></li>
+							<li><a href="#" class="_active">Инфопанель</a></li>
+						</ul>
+					</div>
+					<div class="info-panel">
+						<div class="info-panel__filter filter-info-panel">
+							<div class="filter-info-panel__select">
+								<select name="currency">
+									<option value="1" selected>Валюта UAH</option>
+									<option value="2">Валюта EUR</option>
+									<option value="3">Валюта USD</option>
+								</select>
+							</div>
+							<div class="filter-info-panel__select filter-info-panel__select-calendar">
+								<select name="date">
+									<option value="1" selected>26.04.-26.05.2023</option>
+									<option value="2">Сегодня</option>
+									<option value="3">Вчера</option>
+									<option value="4">Последние 7 дней</option>
+									<option value="5">Последние 30 дней</option>
+									<option value="6">Текущий месяц</option>
+									<option value="7">Предыдущий месяц</option>
+								</select>
+							</div>
+						</div>
+						<div class="info-panel__result result-info-panel">
+							<div class="result-info-panel__grid">
+								<div class="result-info-panel__item">
+									<div class="result-info-panel__label">Успешные</div>
+									<div class="result-info-panel__value">2 670 767,60 <span>UAH</span> / 188</div>
+								</div>
+								<div class="result-info-panel__item">
+									<div class="result-info-panel__label">Возмещенные</div>
+									<div class="result-info-panel__value">2 585 343,48 <span>UAH</span></div>
+								</div>
+								<div class="result-info-panel__item">
+									<div class="result-info-panel__label">Ожидает возмещения</div>
+									<div class="result-info-panel__value">6 710,00 <span>UAH</span></div>
+								</div>
+								<div class="result-info-panel__item">
+									<div class="result-info-panel__label">Возвращенные</div>
+									<div class="result-info-panel__value">0 <span>UAH</span> / 0</div>
+								</div>
+								<div class="result-info-panel__item">
+									<div class="result-info-panel__label">Отклоненные</div>
+									<div class="result-info-panel__value">1 208 002 <span>UAH</span> / 68</div>
+								</div>
+							</div>
+						</div>
+						<div class="info-panel__table table-info-panel">
+							<div class="table-info-panel__column">
+								<div class="table-info-panel__head">Платежи</div>
+								<div class="table-info-panel__body">
+									<div class="table-info-panel__row">
+										<p class="table-info-panel__label table-info-panel__label-cod">1522987_6fee2a0d1aa0f6b4q2f1c0f6b4q2f1c</p>
+										<p class="table-info-panel__label">5*7919</p>
+										<p class="table-info-panel__label">romanowiczmira@gmail.com</p>
+										<div class="table-info-panel__status table-info-panel__status-sc">Успешно</div>
+										<p class="table-info-panel__label">6875,00 <span>UAH</span></p>
+									</div>
+									<div class="table-info-panel__row">
+										<p class="table-info-panel__label table-info-panel__label-cod">1522987_6fee2a0d1aa0f6b4q2f1c0f6b4q2f1c</p>
+										<p class="table-info-panel__label">4*6159</p>
+										<p class="table-info-panel__label">nastiamasliukovska@gmail.com</p>
+										<div class="table-info-panel__status table-info-panel__status-sc">Успешно</div>
+										<p class="table-info-panel__label">12000,00<span>UAH</span></p>
+									</div>
+									<div class="table-info-panel__row">
+										<p class="table-info-panel__label table-info-panel__label-cod">1522987_6fee2a0d1aa0f6b4q2f1c0f6b4q2f1c</p>
+										<p class="table-info-panel__label">...</p>
+										<p class="table-info-panel__label">romanowiczmira@gmail.com</p>
+										<div class="table-info-panel__status">Истек</div>
+										<p class="table-info-panel__label">6875,00 <span>UAH</span></p>
+									</div>
+									<div class="table-info-panel__row">
+										<p class="table-info-panel__label table-info-panel__label-cod">1522987_6fee2a0d1aa0f6b4q2f1c0f6b4q2f1c</p>
+										<p class="table-info-panel__label">5*7919</p>
+										<p class="table-info-panel__label">romanowiczmira@gmail.com</p>
+										<div class="table-info-panel__status table-info-panel__status-sc">Успешно</div>
+										<p class="table-info-panel__label">6875,00 <span>UAH</span></p>
+									</div>
+									<div class="table-info-panel__row">
+										<p class="table-info-panel__label table-info-panel__label-cod">1522987_6fee2a0d1aa0f6b4q2f1c0f6b4q2f1c</p>
+										<p class="table-info-panel__label">5*7919</p>
+										<p class="table-info-panel__label">...</p>
+										<div class="table-info-panel__status">Истек</div>
+										<p class="table-info-panel__label">6875,00 <span>UAH</span></p>
+									</div>
+								</div>
+							</div>
+							<div class="table-info-panel__column">
+								<div class="table-info-panel__head">Мои мерчанты</div>
+								<div class="table-info-panel__body">
+									<div class="table-info-panel__line">
+										<div class="table-info-panel__items">
+											<p class="table-info-panel__label">1525405</p>
+											<p class="table-info-panel__label table-info-panel__label-mail">https://Test.com</p>
+										</div>
+										<p class="table-info-panel__label">Ожидает активации</p>
+									</div>
+									<div class="table-info-panel__line">
+										<div class="table-info-panel__items">
+											<p class="table-info-panel__label">1522987</p>
+											<p class="table-info-panel__label table-info-panel__label-mail">https:/cryptoinvestor.coferferf;we,f</p>
+										</div>
+										<p class="table-info-panel__label">Активный</p>
+									</div>
+									<div class="table-info-panel__line">
+										<div class="table-info-panel__items">
+											<p class="table-info-panel__label">1525405</p>
+											<p class="table-info-panel__label table-info-panel__label-mail">https://Test.com</p>
+										</div>
+										<p class="table-info-panel__label">Ожидает активации</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="info-panel__mobile mobile-info-panel">
+							<div class="mobile-info-panel__payment">
+								<div class="table-info-panel__head">Платежи</div>
+								<div data-spollers class="mobile-info-panel__block">
+									<div data-spoller class="mobile-info-panel__header">
+										<div class="mobile-info-panel__column">
+											<div class="mobile-info-panel__code">1522987_6fee2a0d1aa0f6b4q2f1c</div>
+											<div class="mobile-info-panel__cart">
+												<img src="img/font-icons/cart.svg" alt="">
+												5*7919
+											</div>
+										</div>
+										<p class="table-info-panel__label mobile-info-panel__sum">6875,00 <span>UAH</span></p>
+									</div>
+									<div class="mobile-info-panel__content">
+										<div class="mobile-info-panel__row">
+											<div class="mobile-info-panel__label">Карта</div>
+											<div class="mobile-info-panel__item">5*7919</div>
+										</div>
+										<div class="mobile-info-panel__row">
+											<div class="mobile-info-panel__label">Email</div>
+											<div class="mobile-info-panel__item">romanowiczmira@gmail.com</div>
+										</div>
+										<div class="mobile-info-panel__row">
+											<div class="mobile-info-panel__label">Статус</div>
+											<div class="table-info-panel__status table-info-panel__status-sc">Успешно</div>
+										</div>
+										<div class="mobile-info-panel__row">
+											<div class="mobile-info-panel__label">Сумма</div>
+											<p class="table-info-panel__label">6875,00 <span>UAH</span></p>
+										</div>
+									</div>
+								</div>
+								<div data-spollers class="mobile-info-panel__block">
+									<div data-spoller class="mobile-info-panel__header">
+										<div class="mobile-info-panel__column">
+											<div class="mobile-info-panel__code">1522987_6fee2a0d1aa0f6b4q2f1c</div>
+											<div class="mobile-info-panel__cart">
+												<img src="img/font-icons/cart.svg" alt="">
+												5*7919
+											</div>
+										</div>
+										<p class="table-info-panel__label mobile-info-panel__sum">6875,00 <span>UAH</span></p>
+									</div>
+									<div class="mobile-info-panel__content">
+										<div class="mobile-info-panel__row">
+											<div class="mobile-info-panel__label">Карта</div>
+											<div class="mobile-info-panel__item">5*7919</div>
+										</div>
+										<div class="mobile-info-panel__row">
+											<div class="mobile-info-panel__label">Email</div>
+											<div class="mobile-info-panel__item">romanowiczmira@gmail.com</div>
+										</div>
+										<div class="mobile-info-panel__row">
+											<div class="mobile-info-panel__label">Статус</div>
+											<div class="table-info-panel__status table-info-panel__status-sc">Успешно</div>
+										</div>
+										<div class="mobile-info-panel__row">
+											<div class="mobile-info-panel__label">Сумма</div>
+											<p class="table-info-panel__label">6875,00 <span>UAH</span></p>
+										</div>
+									</div>
+								</div>
+								<div data-spollers class="mobile-info-panel__block">
+									<div data-spoller class="mobile-info-panel__header">
+										<div class="mobile-info-panel__column">
+											<div class="mobile-info-panel__code">1522987_6fee2a0d1aa0f6b4q2f1c</div>
+											<div class="mobile-info-panel__cart">
+												<img src="img/font-icons/cart.svg" alt="">
+												5*7919
+											</div>
+										</div>
+										<p class="table-info-panel__label mobile-info-panel__sum">6875,00 <span>UAH</span></p>
+									</div>
+									<div class="mobile-info-panel__content">
+										<div class="mobile-info-panel__row">
+											<div class="mobile-info-panel__label">Карта</div>
+											<div class="mobile-info-panel__item">4*3850</div>
+										</div>
+										<div class="mobile-info-panel__row">
+											<div class="mobile-info-panel__label">Email</div>
+											<div class="mobile-info-panel__item">...</div>
+										</div>
+										<div class="mobile-info-panel__row">
+											<div class="mobile-info-panel__label">Статус</div>
+											<div class="table-info-panel__status">Истек</div>
+										</div>
+										<div class="mobile-info-panel__row">
+											<div class="mobile-info-panel__label">Сумма</div>
+											<p class="table-info-panel__label">6875,00 <span>UAH</span></p>
+										</div>
+									</div>
+								</div>
+								<div data-spollers class="mobile-info-panel__block">
+									<div data-spoller class="mobile-info-panel__header">
+										<div class="mobile-info-panel__column">
+											<div class="mobile-info-panel__code">1522987_6fee2a0d1aa0f6b4q2f1c</div>
+											<div class="mobile-info-panel__cart">
+												<img src="img/font-icons/cart.svg" alt="">
+												5*7919
+											</div>
+										</div>
+										<p class="table-info-panel__label mobile-info-panel__sum">6875,00 <span>UAH</span></p>
+									</div>
+									<div class="mobile-info-panel__content">
+										<div class="mobile-info-panel__row">
+											<div class="mobile-info-panel__label">Карта</div>
+											<div class="mobile-info-panel__item">5*7919</div>
+										</div>
+										<div class="mobile-info-panel__row">
+											<div class="mobile-info-panel__label">Email</div>
+											<div class="mobile-info-panel__item">romanowiczmira@gmail.com</div>
+										</div>
+										<div class="mobile-info-panel__row">
+											<div class="mobile-info-panel__label">Статус</div>
+											<div class="table-info-panel__status table-info-panel__status-sc">Успешно</div>
+										</div>
+										<div class="mobile-info-panel__row">
+											<div class="mobile-info-panel__label">Сумма</div>
+											<p class="table-info-panel__label">6875,00 <span>UAH</span></p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="mobile-info-panel__merchants merchants-mobile-info">
+								<div class="table-info-panel__head">Платежи</div>
+								<div class="merchants-mobile-info__block">
+									<div class="merchants-mobile-info__content">
+										<p class="merchants-mobile-info__code">1525405</p>
+										<p class="merchants-mobile-info__mail">https://Test.com</p>
+									</div>
+									<p class="merchants-mobile-info__status">Ожидает активации</p>
+								</div>
+								<div class="merchants-mobile-info__block">
+									<div class="merchants-mobile-info__content">
+										<p class="merchants-mobile-info__code">1522987</p>
+										<p class="merchants-mobile-info__mail">https:/cryptoinvestor.com.ua</p>
+									</div>
+									<p class="merchants-mobile-info__status">Активный</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="nav">
+					<a href="#" class="nav__item icon-menu">
+						<img src="img/font-icons/wartawa.svg" alt="">
+						<p>Wartawa</p>
+					</a>
+					<a href="#" class="nav__item">
+						<img src="img/font-icons/payment.svg" alt="">
+						<p>Платежи</p>
+					</a>
+					<a href="#" class="nav__item">
+						<img src="img/font-icons/merchans.svg" alt="">
+						<p>Мои мерчанты</p>
+					</a>
+					<a href="#" class="nav__item">
+						<img src="img/font-icons/nav-balances.svg" alt="">
+						<p>Балансы</p>
+					</a>
+					<a href="#" class="nav__item">
+						<img src="img/font-icons/nav-invoices.svg" alt="">
+						<p>Инвойсы</p>
+					</a>
+				</div>
+			</main>
+		</div>
+	</div>
+	<script src="js/app.js"></script>
+</body>
+
+</html>

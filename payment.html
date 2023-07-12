@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="r">
+
+<head>
+	<title>История платежей</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="page">
+			<aside data-simplebar class="sidebar">
+				<a href="#" class="sidebar__logo">
+					<img src="img/logo.svg" alt="Логотип">
+				</a>
+				<div class="sidebar__status"><span></span>Верифицирован</div>
+				<nav class="sidebar__menu menu-sidebar">
+					<ul class="menu-sidebar__list">
+						<li><a class="_active" href="#"><img src="img/font-icons/infopanel.svg" alt="">Инфопанель</a></li>
+						<li><a href="#"><img src="img/font-icons/list.svg" alt="">Список мерчантов</a></li>
+						<li><a href="#"><img src="img/font-icons/history.svg" alt="">История платежей</a></li>
+						<li><a href="#"><img src="img/font-icons/balances.svg" alt="">Балансы</a></li>
+						<li><a href="#"><img src="img/font-icons/return.svg" alt="">Вывод средств</a></li>
+						<li><a href="#"><img src="img/font-icons/invoices.svg" alt="">Инвойсы</a></li>
+						<li><a href="#"><img src="img/font-icons/api.svg" alt="">Документация API</a></li>
+						<li><a href="#"><img src="img/font-icons/employees.svg" alt="">Сотрудники</a></li>
+					</ul>
+				</nav>
+			</aside>
+			<main class="main">
+				<header class="header">
+					<div class="header__container">
+						<h1 class="header__title">История платежей</h1>
+						<div class="header__user user-header">
+							<div class="user-header__avatar">BJ</div>
+							<div class="user-header__content">
+								<div class="user-header__name">Boris Johnson</div>
+								<div class="user-header__dropdown">
+									<img src="img/font-icons/menu-arrow.svg" alt="Открыть меню">
+								</div>
+							</div>
+						</div>
+					</div>
+				</header>
+				<div class="main__container">
+					<div class="breadcrumbs">
+						<ul>
+							<li><a href="#">Главная</a></li>
+							<li><a href="#" class="_active">История платежей</a></li>
+						</ul>
+					</div>
+					<div data-tabs class="payments-list">
+						<div class="payments-list__title">Платежи</div>
+						<nav class="payments-list__nav">
+							<div data-tabs-titles class="payments-list__menu">
+								<button data-tabs-title type="button" class="settings-merchants__button button _tab-active">Итория платежей</button>
+								<button data-tabs-title type="button" class="settings-merchants__button button">Платежи по подписке</button>
+								<button data-tabs-title type="button" class="settings-merchants__button button">Возвращенные платежи</button>
+								<button data-tabs-title type="button" class="settings-merchants__button button">Возмещения</button>
+								<button data-tabs-title type="button" class="settings-merchants__button button">Финансовые претензии</button>
+							</div>
+							<div class="payments-list__actions actions-payments-list">
+								<a href="#" class="actions-payments-list__export button">Экспортировать отчет</a>
+								<a href="#" class="actions-payments-list__settings button button-green">Настроить отчеты</a>
+								<div class="actions-payments-list__filter filter-payments-list">
+									<button type="button" class="filter-payments-list__button button button-filter">Фильтр</button>
+									<div class="filter-payments-list__form"></div>
+								</div>
+							</div>
+						</nav>
+						<div data-tabs-body class="payments-list__body">
+							<div data-tabs-item class="payments-list__inner">
+								<div class="payments-list__caption">История платежей</div>
+								<form data-da=".filter-payments-list__form, 768" action="#" class="payments-list__search search-payment-list">
+									<div class="search-payment-list__inputs">
+										<div class="search-merchants__input">
+											<div class="search-merchants__label input-label">ID платежа</div>
+											<input type="number" name="id" placeholder="ID платежа" class="input">
+										</div>
+										<div class="search-merchants__input">
+											<div class="search-merchants__label input-label">Номер карты</div>
+											<input type="number" name="id" placeholder="Номер карты" class="input">
+										</div>
+										<div class="search-merchants__input">
+											<div class="search-merchants__label input-label">Платежная система</div>
+											<select name="payment-system">
+												<option value="1" selected>Все</option>
+												<option value="2">Все</option>
+												<option value="3">Все</option>
+												<option value="4">Все</option>
+											</select>
+										</div>
+										<div class="search-merchants__input">
+											<div class="search-merchants__label input-label">Email</div>
+											<input type="email" name="email" placeholder="Email" class="input">
+										</div>
+										<div class="search-merchants__input">
+											<div class="search-merchants__label input-label">Дата</div>
+											<input type="text" name="date" placeholder="Дата" class="input">
+										</div>
+										<div class="search-merchants__input">
+											<div class="search-merchants__label input-label">Сумма</div>
+											<input type="number" name="suma" placeholder="Сумма" class="input">
+										</div>
+										<div class="search-merchants__input">
+											<div class="search-merchants__label input-label">Статус</div>
+											<select name="status" data-class-modif="form">
+												<option value="1" selected>Все</option>
+												<option value="2">Все</option>
+												<option value="3">Все</option>
+												<option value="4">Все</option>
+											</select>
+										</div>
+										<div class="search-merchants__input">
+											<div class="search-merchants__label input-label">Фильтровать данные</div>
+											<input type="number" name="suma" placeholder="Фильтровать данные" class="input">
+										</div>
+									</div>
+									<button type="submit" class="search-payment-list__send button button-green"><span>Поиск</span></button>
+								</form>
+								<div class="payments-list__content">
+									<div class="payments-list__item">
+										<div class="payments-list__label">1522987_6fee2a0d1aa0f6...</div>
+										<div class="payments-list__label">5*7919</div>
+										<div class="payments-list__label">VISA/MC</div>
+										<div class="payments-list__label">romanowiczmira@gmail.com</div>
+										<div class="payments-list__label">2023.05.25 - 15:20:39</div>
+										<div class="payments-list__label">6875,00 <span>UAH</span></div>
+										<div class="payments-list__status">
+											<div class="payments-list__status-sc">Успешно</div>
+											<div class="payments-list__status-vz">Возмещён</div>
+										</div>
+										<div class="payments-list__label">...</div>
+									</div>
+									<div class="payments-list__item">
+										<div class="payments-list__label">1522987_6fee2a0d1aa0f6</div>
+										<div class="payments-list__label">5*7919</div>
+										<div class="payments-list__label">...</div>
+										<div class="payments-list__label">...</div>
+										<div class="payments-list__label">2023.05.25 - 15:20:39</div>
+										<div class="payments-list__label">12000,00<span>UAH</span></div>
+										<div class="payments-list__status">
+											<div class="payments-list__status-sc">Успешно</div>
+										</div>
+										<div class="payments-list__label">...</div>
+									</div>
+									<div class="payments-list__item">
+										<div class="payments-list__label">1522987_6fee2a0d1aa0f6...</div>
+										<div class="payments-list__label">5*7919</div>
+										<div class="payments-list__label">VISA/MC</div>
+										<div class="payments-list__label">romanowiczmira@gmail.com</div>
+										<div class="payments-list__label">2023.05.25 - 15:20:39</div>
+										<div class="payments-list__label">6875,00 <span>UAH</span></div>
+										<div class="payments-list__status">
+											<div class="payments-list__status-sc">Успешно</div>
+											<div class="payments-list__status-vz">Возмещён</div>
+										</div>
+										<div class="payments-list__label">...</div>
+									</div>
+									<div class="payments-list__item">
+										<div class="payments-list__label">1522987_6fee2a0d1aa0f6...</div>
+										<div class="payments-list__label">5*7919</div>
+										<div class="payments-list__label">VISA/MC</div>
+										<div class="payments-list__label">romanowiczmira@gmail.com</div>
+										<div class="payments-list__label">2023.05.25 - 15:20:39</div>
+										<div class="payments-list__label">6875,00 <span>UAH</span></div>
+										<div class="payments-list__status">
+											<div class="payments-list__status-vz">Возмещён</div>
+										</div>
+										<div class="payments-list__label">...</div>
+									</div>
+								</div>
+							</div>
+							<div data-tabs-item class="payments-list__inner">
+								<div class="payments-list__caption">Платежи по подписке</div>
+								<form action="#" class="payments-list__search search-payment-list">
+									<div class="search-payment-list__inputs">
+										<div class="search-merchants__input">
+											<div class="search-merchants__label input-label">ID платежа</div>
+											<input type="number" name="id" placeholder="ID платежа" class="input">
+										</div>
+										<div class="search-merchants__input">
+											<div class="search-merchants__label input-label">Номер карты</div>
+											<input type="number" name="id" placeholder="Номер карты" class="input">
+										</div>
+										<div class="search-merchants__input">
+											<div class="search-merchants__label input-label">Платежная система</div>
+											<select name="payment-system">
+												<option value="1" selected>Все</option>
+												<option value="2">Все</option>
+												<option value="3">Все</option>
+												<option value="4">Все</option>
+											</select>
+										</div>
+										<div class="search-merchants__input">
+											<div class="search-merchants__label input-label">Email</div>
+											<input type="email" name="email" placeholder="Email" class="input">
+										</div>
+										<div class="search-merchants__input">
+											<div class="search-merchants__label input-label">Дата</div>
+											<input type="text" name="date" placeholder="Дата" class="input">
+										</div>
+										<div class="search-merchants__input">
+											<div class="search-merchants__label input-label">Сумма</div>
+											<input type="number" name="suma" placeholder="Сумма" class="input">
+										</div>
+										<div class="search-merchants__input">
+											<div class="search-merchants__label input-label">Статус</div>
+											<select name="status" data-class-modif="form">
+												<option value="1" selected>Все</option>
+												<option value="2">Все</option>
+												<option value="3">Все</option>
+												<option value="4">Все</option>
+											</select>
+										</div>
+										<div class="search-merchants__input">
+											<div class="search-merchants__label input-label">Фильтровать данные</div>
+											<input type="number" name="suma" placeholder="Фильтровать данные" class="input">
+										</div>
+									</div>
+									<button type="submit" class="search-payment-list__send button button-green"><span>Поиск</span></button>
+								</form>
+								<div class="payments-list__content">
+									<div class="payments-list__item">
+										<div class="payments-list__label">1522987_6fee2a0d1aa0f6...</div>
+										<div class="payments-list__label">5*7919</div>
+										<div class="payments-list__label">VISA/MC</div>
+										<div class="payments-list__label">romanowiczmira@gmail.com</div>
+										<div class="payments-list__label">2023.05.25 - 15:20:39</div>
+										<div class="payments-list__label">6875,00 <span>UAH</span></div>
+										<div class="payments-list__status">
+											<div class="payments-list__status-sc">Успешно</div>
+											<div class="payments-list__status-vz">Возмещён</div>
+										</div>
+										<div class="payments-list__label">...</div>
+									</div>
+								</div>
+							</div>
+							<div data-tabs-item class="payments-list__inner">
+								<div class="payments-list__caption">Возвращенные платежи</div>
+								<form action="#" class="payments-list__search search-payment-list">
+									<div class="search-payment-list__inputs">
+										<div class="search-merchants__input">
+											<div class="search-merchants__label input-label">ID платежа</div>
+											<input type="number" name="id" placeholder="ID платежа" class="input">
+										</div>
+										<div class="search-merchants__input">
+											<div class="search-merchants__label input-label">Номер карты</div>
+											<input type="number" name="id" placeholder="Номер карты" class="input">
+										</div>
+										<div class="search-merchants__input">
+											<div class="search-merchants__label input-label">Платежная система</div>
+											<select name="payment-system">
+												<option value="1" selected>Все</option>
+												<option value="2">Все</option>
+												<option value="3">Все</option>
+												<option value="4">Все</option>
+											</select>
+										</div>
+										<div class="search-merchants__input">
+											<div class="search-merchants__label input-label">Email</div>
+											<input type="email" name="email" placeholder="Email" class="input">
+										</div>
+										<div class="search-merchants__input">
+											<div class="search-merchants__label input-label">Дата</div>
+											<input type="text" name="date" placeholder="Дата" class="input">
+										</div>
+										<div class="search-merchants__input">
+											<div class="search-merchants__label input-label">Сумма</div>
+											<input type="number" name="suma" placeholder="Сумма" class="input">
+										</div>
+										<div class="search-merchants__input">
+											<div class="search-merchants__label input-label">Статус</div>
+											<select name="status" data-class-modif="form">
+												<option value="1" selected>Все</option>
+												<option value="2">Все</option>
+												<option value="3">Все</option>
+												<option value="4">Все</option>
+											</select>
+										</div>
+										<div class="search-merchants__input">
+											<div class="search-merchants__label input-label">Фильтровать данные</div>
+											<input type="number" name="suma" placeholder="Фильтровать данные" class="input">
+										</div>
+									</div>
+									<button type="submit" class="search-payment-list__send button button-green"><span>Поиск</span></button>
+								</form>
+								<div class="payments-list__content">
+									<div class="payments-list__item">
+										<div class="payments-list__label">1522987_6fee2a0d1aa0f6...</div>
+										<div class="payments-list__label">5*7919</div>
+										<div class="payments-list__label">VISA/MC</div>
+										<div class="payments-list__label">romanowiczmira@gmail.com</div>
+										<div class="payments-list__label">2023.05.25 - 15:20:39</div>
+										<div class="payments-list__label">6875,00 <span>UAH</span></div>
+										<div class="payments-list__status">
+											<div class="payments-list__status-sc">Успешно</div>
+											<div class="payments-list__status-vz">Возмещён</div>
+										</div>
+										<div class="payments-list__label">...</div>
+									</div>
+									<div class="payments-list__item">
+										<div class="payments-list__label">1522987_6fee2a0d1aa0f6</div>
+										<div class="payments-list__label">5*7919</div>
+										<div class="payments-list__label">...</div>
+										<div class="payments-list__label">...</div>
+										<div class="payments-list__label">2023.05.25 - 15:20:39</div>
+										<div class="payments-list__label">12000,00<span>UAH</span></div>
+										<div class="payments-list__status">
+											<div class="payments-list__status-sc">Успешно</div>
+										</div>
+										<div class="payments-list__label">...</div>
+									</div>
+									<div class="payments-list__item">
+										<div class="payments-list__label">1522987_6fee2a0d1aa0f6...</div>
+										<div class="payments-list__label">5*7919</div>
+										<div class="payments-list__label">VISA/MC</div>
+										<div class="payments-list__label">romanowiczmira@gmail.com</div>
+										<div class="payments-list__label">2023.05.25 - 15:20:39</div>
+										<div class="payments-list__label">6875,00 <span>UAH</span></div>
+										<div class="payments-list__status">
+											<div class="payments-list__status-sc">Успешно</div>
+											<div class="payments-list__status-vz">Возмещён</div>
+										</div>
+										<div class="payments-list__label">...</div>
+									</div>
+									<div class="payments-list__item">
+										<div class="payments-list__label">1522987_6fee2a0d1aa0f6...</div>
+										<div class="payments-list__label">5*7919</div>
+										<div class="payments-list__label">VISA/MC</div>
+										<div class="payments-list__label">romanowiczmira@gmail.com</div>
+										<div class="payments-list__label">2023.05.25 - 15:20:39</div>
+										<div class="payments-list__label">6875,00 <span>UAH</span></div>
+										<div class="payments-list__status">
+											<div class="payments-list__status-vz">Возмещён</div>
+										</div>
+										<div class="payments-list__label">...</div>
+									</div>
+								</div>
+							</div>
+							<div data-tabs-item class="payments-list__inner">
+								<div class="payments-list__caption">Возмещения</div>
+								<form action="#" class="payments-list__search search-payment-list">
+									<div class="search-payment-list__inputs">
+										<div class="search-merchants__input">
+											<div class="search-merchants__label input-label">ID платежа</div>
+											<input type="number" name="id" placeholder="ID платежа" class="input">
+										</div>
+										<div class="search-merchants__input">
+											<div class="search-merchants__label input-label">Номер карты</div>
+											<input type="number" name="id" placeholder="Номер карты" class="input">
+										</div>
+										<div class="search-merchants__input">
+											<div class="search-merchants__label input-label">Платежная система</div>
+											<select name="payment-system">
+												<option value="1" selected>Все</option>
+												<option value="2">Все</option>
+												<option value="3">Все</option>
+												<option value="4">Все</option>
+											</select>
+										</div>
+										<div class="search-merchants__input">
+											<div class="search-merchants__label input-label">Email</div>
+											<input type="email" name="email" placeholder="Email" class="input">
+										</div>
+										<div class="search-merchants__input">
+											<div class="search-merchants__label input-label">Дата</div>
+											<input type="text" name="date" placeholder="Дата" class="input">
+										</div>
+										<div class="search-merchants__input">
+											<div class="search-merchants__label input-label">Сумма</div>
+											<input type="number" name="suma" placeholder="Сумма" class="input">
+										</div>
+										<div class="search-merchants__input">
+											<div class="search-merchants__label input-label">Статус</div>
+											<select name="status" data-class-modif="form">
+												<option value="1" selected>Все</option>
+												<option value="2">Все</option>
+												<option value="3">Все</option>
+												<option value="4">Все</option>
+											</select>
+										</div>
+										<div class="search-merchants__input">
+											<div class="search-merchants__label input-label">Фильтровать данные</div>
+											<input type="number" name="suma" placeholder="Фильтровать данные" class="input">
+										</div>
+									</div>
+									<button type="submit" class="search-payment-list__send button button-green"><span>Поиск</span></button>
+								</form>
+								<div class="payments-list__content">
+									<div class="payments-list__item">
+										<div class="payments-list__label">1522987_6fee2a0d1aa0f6...</div>
+										<div class="payments-list__label">5*7919</div>
+										<div class="payments-list__label">VISA/MC</div>
+										<div class="payments-list__label">romanowiczmira@gmail.com</div>
+										<div class="payments-list__label">2023.05.25 - 15:20:39</div>
+										<div class="payments-list__label">6875,00 <span>UAH</span></div>
+										<div class="payments-list__status">
+											<div class="payments-list__status-sc">Успешно</div>
+											<div class="payments-list__status-vz">Возмещён</div>
+										</div>
+										<div class="payments-list__label">...</div>
+									</div>
+								</div>
+							</div>
+							<div data-tabs-item class="payments-list__inner">
+								<div class="payments-list__caption">Финансовые претензии</div>
+								<form action="#" class="payments-list__search search-payment-list">
+									<div class="search-payment-list__inputs">
+										<div class="search-merchants__input">
+											<div class="search-merchants__label input-label">ID платежа</div>
+											<input type="number" name="id" placeholder="ID платежа" class="input">
+										</div>
+										<div class="search-merchants__input">
+											<div class="search-merchants__label input-label">Номер карты</div>
+											<input type="number" name="id" placeholder="Номер карты" class="input">
+										</div>
+										<div class="search-merchants__input">
+											<div class="search-merchants__label input-label">Платежная система</div>
+											<select name="payment-system">
+												<option value="1" selected>Все</option>
+												<option value="2">Все</option>
+												<option value="3">Все</option>
+												<option value="4">Все</option>
+											</select>
+										</div>
+										<div class="search-merchants__input">
+											<div class="search-merchants__label input-label">Email</div>
+											<input type="email" name="email" placeholder="Email" class="input">
+										</div>
+										<div class="search-merchants__input">
+											<div class="search-merchants__label input-label">Дата</div>
+											<input type="text" name="date" placeholder="Дата" class="input">
+										</div>
+										<div class="search-merchants__input">
+											<div class="search-merchants__label input-label">Сумма</div>
+											<input type="number" name="suma" placeholder="Сумма" class="input">
+										</div>
+										<div class="search-merchants__input">
+											<div class="search-merchants__label input-label">Статус</div>
+											<select name="status" data-class-modif="form">
+												<option value="1" selected>Все</option>
+												<option value="2">Все</option>
+												<option value="3">Все</option>
+												<option value="4">Все</option>
+											</select>
+										</div>
+										<div class="search-merchants__input">
+											<div class="search-merchants__label input-label">Фильтровать данные</div>
+											<input type="number" name="suma" placeholder="Фильтровать данные" class="input">
+										</div>
+									</div>
+									<button type="submit" class="search-payment-list__send button button-green"><span>Поиск</span></button>
+								</form>
+								<div class="payments-list__content">
+									<div class="payments-list__item">
+										<div class="payments-list__label">1522987_6fee2a0d1aa0f6...</div>
+										<div class="payments-list__label">5*7919</div>
+										<div class="payments-list__label">VISA/MC</div>
+										<div class="payments-list__label">romanowiczmira@gmail.com</div>
+										<div class="payments-list__label">2023.05.25 - 15:20:39</div>
+										<div class="payments-list__label">6875,00 <span>UAH</span></div>
+										<div class="payments-list__status">
+											<div class="payments-list__status-vz">Возмещён</div>
+										</div>
+										<div class="payments-list__label">...</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div data-tabs-body class="payments-list__mobile mobile-list-payment">
+							<div data-tabs-item class="mobile-list-payment__inner">
+								<div data-spollers class="mobile-list-payment__block">
+									<div data-spoller class="mobile-list-payment__header">
+										<div class="mobile-list-payment__column">
+											<p class="mobile-list-payment__code">1522987_6fee2a0d1aa0f6b4q2f1c...</p>
+											<p class="mobile-list-payment__cart">5*7919</p>
+										</div>
+										<div class="mobile-list-payment__sum">6875,00 <span>UAH</span></div>
+									</div>
+									<div class="mobile-list-payment__content">
+										<div class="mobile-list-payment__line">
+											<p class="mobile-list-payment__label">Номер карты</p>
+											<div class="mobile-list-payment__value">5*7919</div>
+										</div>
+										<div class="mobile-list-payment__line">
+											<p class="mobile-list-payment__label">Платежная система</p>
+											<div class="mobile-list-payment__value">VISA/MC</div>
+										</div>
+										<div class="mobile-list-payment__line">
+											<p class="mobile-list-payment__label">Email</p>
+											<div class="mobile-list-payment__value">romanowiczmira@gmail.com</div>
+										</div>
+										<div class="mobile-list-payment__line">
+											<p class="mobile-list-payment__label">Дата</p>
+											<div class="mobile-list-payment__value">2023.05.25 - 15:20:39</div>
+										</div>
+										<div class="mobile-list-payment__line">
+											<p class="mobile-list-payment__label">Сумма</p>
+											<div class="mobile-list-payment__value">6875,00 <span>UAH</span></div>
+										</div>
+										<div class="mobile-list-payment__line">
+											<p class="mobile-list-payment__label">Статус</p>
+											<div class="mobile-list-payment__status">
+												<div class="payments-list__status-sc">Успешно</div>
+												<div class="payments-list__status-vz">Возмещён</div>
+											</div>
+										</div>
+										<div class="mobile-list-payment__line">
+											<p class="mobile-list-payment__label">Доп. данные</p>
+											<div class="mobile-list-payment__value">...</div>
+										</div>
+									</div>
+								</div>
+								<div data-spollers class="mobile-list-payment__block">
+									<div data-spoller class="mobile-list-payment__header">
+										<div class="mobile-list-payment__column">
+											<p class="mobile-list-payment__code">1522987_6fee2a0d1aa0f6b4q2f1c...</p>
+											<p class="mobile-list-payment__cart">5*7919</p>
+										</div>
+										<div class="mobile-list-payment__sum">6875,00 <span>UAH</span></div>
+									</div>
+									<div class="mobile-list-payment__content">
+										<div class="mobile-list-payment__line">
+											<p class="mobile-list-payment__label">Номер карты</p>
+											<div class="mobile-list-payment__value">5*7919</div>
+										</div>
+										<div class="mobile-list-payment__line">
+											<p class="mobile-list-payment__label">Платежная система</p>
+											<div class="mobile-list-payment__value">VISA/MC</div>
+										</div>
+										<div class="mobile-list-payment__line">
+											<p class="mobile-list-payment__label">Email</p>
+											<div class="mobile-list-payment__value">romanowiczmira@gmail.com</div>
+										</div>
+										<div class="mobile-list-payment__line">
+											<p class="mobile-list-payment__label">Дата</p>
+											<div class="mobile-list-payment__value">2023.05.25 - 15:20:39</div>
+										</div>
+										<div class="mobile-list-payment__line">
+											<p class="mobile-list-payment__label">Сумма</p>
+											<div class="mobile-list-payment__value">6875,00 <span>UAH</span></div>
+										</div>
+										<div class="mobile-list-payment__line">
+											<p class="mobile-list-payment__label">Статус</p>
+											<div class="mobile-list-payment__status">
+												<div class="payments-list__status-sc">Успешно</div>
+												<div class="payments-list__status-vz">Возмещён</div>
+											</div>
+										</div>
+										<div class="mobile-list-payment__line">
+											<p class="mobile-list-payment__label">Доп. данные</p>
+											<div class="mobile-list-payment__value">...</div>
+										</div>
+									</div>
+								</div>
+								<div data-spollers class="mobile-list-payment__block">
+									<div data-spoller class="mobile-list-payment__header">
+										<div class="mobile-list-payment__column">
+											<p class="mobile-list-payment__code">1522987_6fee2a0d1aa0f6b4q2f1c...</p>
+											<p class="mobile-list-payment__cart">5*7919</p>
+										</div>
+										<div class="mobile-list-payment__sum">6875,00 <span>UAH</span></div>
+									</div>
+									<div class="mobile-list-payment__content">
+										<div class="mobile-list-payment__line">
+											<p class="mobile-list-payment__label">Номер карты</p>
+											<div class="mobile-list-payment__value">5*7919</div>
+										</div>
+										<div class="mobile-list-payment__line">
+											<p class="mobile-list-payment__label">Платежная система</p>
+											<div class="mobile-list-payment__value">VISA/MC</div>
+										</div>
+										<div class="mobile-list-payment__line">
+											<p class="mobile-list-payment__label">Email</p>
+											<div class="mobile-list-payment__value">romanowiczmira@gmail.com</div>
+										</div>
+										<div class="mobile-list-payment__line">
+											<p class="mobile-list-payment__label">Дата</p>
+											<div class="mobile-list-payment__value">2023.05.25 - 15:20:39</div>
+										</div>
+										<div class="mobile-list-payment__line">
+											<p class="mobile-list-payment__label">Сумма</p>
+											<div class="mobile-list-payment__value">6875,00 <span>UAH</span></div>
+										</div>
+										<div class="mobile-list-payment__line">
+											<p class="mobile-list-payment__label">Статус</p>
+											<div class="mobile-list-payment__status">
+												<div class="payments-list__status-sc">Успешно</div>
+												<div class="payments-list__status-vz">Возмещён</div>
+											</div>
+										</div>
+										<div class="mobile-list-payment__line">
+											<p class="mobile-list-payment__label">Доп. данные</p>
+											<div class="mobile-list-payment__value">...</div>
+										</div>
+									</div>
+								</div>
+								<div data-spollers class="mobile-list-payment__block">
+									<div data-spoller class="mobile-list-payment__header">
+										<div class="mobile-list-payment__column">
+											<p class="mobile-list-payment__code">1522987_6fee2a0d1aa0f6b4q2f1c...</p>
+											<p class="mobile-list-payment__cart">5*7919</p>
+										</div>
+										<div class="mobile-list-payment__sum">6875,00 <span>UAH</span></div>
+									</div>
+									<div class="mobile-list-payment__content">
+										<div class="mobile-list-payment__line">
+											<p class="mobile-list-payment__label">Номер карты</p>
+											<div class="mobile-list-payment__value">5*7919</div>
+										</div>
+										<div class="mobile-list-payment__line">
+											<p class="mobile-list-payment__label">Платежная система</p>
+											<div class="mobile-list-payment__value">VISA/MC</div>
+										</div>
+										<div class="mobile-list-payment__line">
+											<p class="mobile-list-payment__label">Email</p>
+											<div class="mobile-list-payment__value">romanowiczmira@gmail.com</div>
+										</div>
+										<div class="mobile-list-payment__line">
+											<p class="mobile-list-payment__label">Дата</p>
+											<div class="mobile-list-payment__value">2023.05.25 - 15:20:39</div>
+										</div>
+										<div class="mobile-list-payment__line">
+											<p class="mobile-list-payment__label">Сумма</p>
+											<div class="mobile-list-payment__value">6875,00 <span>UAH</span></div>
+										</div>
+										<div class="mobile-list-payment__line">
+											<p class="mobile-list-payment__label">Статус</p>
+											<div class="mobile-list-payment__status">
+												<div class="payments-list__status-sc">Успешно</div>
+												<div class="payments-list__status-vz">Возмещён</div>
+											</div>
+										</div>
+										<div class="mobile-list-payment__line">
+											<p class="mobile-list-payment__label">Доп. данные</p>
+											<div class="mobile-list-payment__value">...</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div data-tabs-item class="mobile-list-payment__inner">
+								<div data-spollers class="mobile-list-payment__block">
+									<div data-spoller class="mobile-list-payment__header">
+										<div class="mobile-list-payment__column">
+											<p class="mobile-list-payment__code">1522987_6fee2a0d1aa0f6b4q2f1c...</p>
+											<p class="mobile-list-payment__cart">5*7919</p>
+										</div>
+										<div class="mobile-list-payment__sum">6875,00 <span>UAH</span></div>
+									</div>
+									<div class="mobile-list-payment__content">
+										<div class="mobile-list-payment__line">
+											<p class="mobile-list-payment__label">Номер карты</p>
+											<div class="mobile-list-payment__value">5*7919</div>
+										</div>
+										<div class="mobile-list-payment__line">
+											<p class="mobile-list-payment__label">Платежная система</p>
+											<div class="mobile-list-payment__value">VISA/MC</div>
+										</div>
+										<div class="mobile-list-payment__line">
+											<p class="mobile-list-payment__label">Email</p>
+											<div class="mobile-list-payment__value">romanowiczmira@gmail.com</div>
+										</div>
+										<div class="mobile-list-payment__line">
+											<p class="mobile-list-payment__label">Дата</p>
+											<div class="mobile-list-payment__value">2023.05.25 - 15:20:39</div>
+										</div>
+										<div class="mobile-list-payment__line">
+											<p class="mobile-list-payment__label">Сумма</p>
+											<div class="mobile-list-payment__value">6875,00 <span>UAH</span></div>
+										</div>
+										<div class="mobile-list-payment__line">
+											<p class="mobile-list-payment__label">Статус</p>
+											<div class="mobile-list-payment__status">
+												<div class="payments-list__status-sc">Успешно</div>
+												<div class="payments-list__status-vz">Возмещён</div>
+											</div>
+										</div>
+										<div class="mobile-list-payment__line">
+											<p class="mobile-list-payment__label">Доп. данные</p>
+											<div class="mobile-list-payment__value">...</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div data-tabs-item class="mobile-list-payment__inner">
+								<div data-spollers class="mobile-list-payment__block">
+									<div data-spoller class="mobile-list-payment__header">
+										<div class="mobile-list-payment__column">
+											<p class="mobile-list-payment__code">1522987_6fee2a0d1aa0f6b4q2f1c...</p>
+											<p class="mobile-list-payment__cart">5*7919</p>
+										</div>
+										<div class="mobile-list-payment__sum">6875,00 <span>UAH</span></div>
+									</div>
+									<div class="mobile-list-payment__content">
+										<div class="mobile-list-payment__line">
+											<p class="mobile-list-payment__label">Номер карты</p>
+											<div class="mobile-list-payment__value">5*7919</div>
+										</div>
+										<div class="mobile-list-payment__line">
+											<p class="mobile-list-payment__label">Платежная система</p>
+											<div class="mobile-list-payment__value">VISA/MC</div>
+										</div>
+										<div class="mobile-list-payment__line">
+											<p class="mobile-list-payment__label">Email</p>
+											<div class="mobile-list-payment__value">romanowiczmira@gmail.com</div>
+										</div>
+										<div class="mobile-list-payment__line">
+											<p class="mobile-list-payment__label">Дата</p>
+											<div class="mobile-list-payment__value">2023.05.25 - 15:20:39</div>
+										</div>
+										<div class="mobile-list-payment__line">
+											<p class="mobile-list-payment__label">Сумма</p>
+											<div class="mobile-list-payment__value">6875,00 <span>UAH</span></div>
+										</div>
+										<div class="mobile-list-payment__line">
+											<p class="mobile-list-payment__label">Статус</p>
+											<div class="mobile-list-payment__status">
+												<div class="payments-list__status-sc">Успешно</div>
+												<div class="payments-list__status-vz">Возмещён</div>
+											</div>
+										</div>
+										<div class="mobile-list-payment__line">
+											<p class="mobile-list-payment__label">Доп. данные</p>
+											<div class="mobile-list-payment__value">...</div>
+										</div>
+									</div>
+								</div>
+								<div data-spollers class="mobile-list-payment__block">
+									<div data-spoller class="mobile-list-payment__header">
+										<div class="mobile-list-payment__column">
+											<p class="mobile-list-payment__code">1522987_6fee2a0d1aa0f6b4q2f1c...</p>
+											<p class="mobile-list-payment__cart">5*7919</p>
+										</div>
+										<div class="mobile-list-payment__sum">6875,00 <span>UAH</span></div>
+									</div>
+									<div class="mobile-list-payment__content">
+										<div class="mobile-list-payment__line">
+											<p class="mobile-list-payment__label">Номер карты</p>
+											<div class="mobile-list-payment__value">5*7919</div>
+										</div>
+										<div class="mobile-list-payment__line">
+											<p class="mobile-list-payment__label">Платежная система</p>
+											<div class="mobile-list-payment__value">VISA/MC</div>
+										</div>
+										<div class="mobile-list-payment__line">
+											<p class="mobile-list-payment__label">Email</p>
+											<div class="mobile-list-payment__value">romanowiczmira@gmail.com</div>
+										</div>
+										<div class="mobile-list-payment__line">
+											<p class="mobile-list-payment__label">Дата</p>
+											<div class="mobile-list-payment__value">2023.05.25 - 15:20:39</div>
+										</div>
+										<div class="mobile-list-payment__line">
+											<p class="mobile-list-payment__label">Сумма</p>
+											<div class="mobile-list-payment__value">6875,00 <span>UAH</span></div>
+										</div>
+										<div class="mobile-list-payment__line">
+											<p class="mobile-list-payment__label">Статус</p>
+											<div class="mobile-list-payment__status">
+												<div class="payments-list__status-sc">Успешно</div>
+												<div class="payments-list__status-vz">Возмещён</div>
+											</div>
+										</div>
+										<div class="mobile-list-payment__line">
+											<p class="mobile-list-payment__label">Доп. данные</p>
+											<div class="mobile-list-payment__value">...</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div data-tabs-item class="mobile-list-payment__inner">
+								<div data-spollers class="mobile-list-payment__block">
+									<div data-spoller class="mobile-list-payment__header">
+										<div class="mobile-list-payment__column">
+											<p class="mobile-list-payment__code">1522987_6fee2a0d1aa0f6b4q2f1c...</p>
+											<p class="mobile-list-payment__cart">5*7919</p>
+										</div>
+										<div class="mobile-list-payment__sum">6875,00 <span>UAH</span></div>
+									</div>
+									<div class="mobile-list-payment__content">
+										<div class="mobile-list-payment__line">
+											<p class="mobile-list-payment__label">Номер карты</p>
+											<div class="mobile-list-payment__value">5*7919</div>
+										</div>
+										<div class="mobile-list-payment__line">
+											<p class="mobile-list-payment__label">Платежная система</p>
+											<div class="mobile-list-payment__value">VISA/MC</div>
+										</div>
+										<div class="mobile-list-payment__line">
+											<p class="mobile-list-payment__label">Email</p>
+											<div class="mobile-list-payment__value">romanowiczmira@gmail.com</div>
+										</div>
+										<div class="mobile-list-payment__line">
+											<p class="mobile-list-payment__label">Дата</p>
+											<div class="mobile-list-payment__value">2023.05.25 - 15:20:39</div>
+										</div>
+										<div class="mobile-list-payment__line">
+											<p class="mobile-list-payment__label">Сумма</p>
+											<div class="mobile-list-payment__value">6875,00 <span>UAH</span></div>
+										</div>
+										<div class="mobile-list-payment__line">
+											<p class="mobile-list-payment__label">Статус</p>
+											<div class="mobile-list-payment__status">
+												<div class="payments-list__status-sc">Успешно</div>
+												<div class="payments-list__status-vz">Возмещён</div>
+											</div>
+										</div>
+										<div class="mobile-list-payment__line">
+											<p class="mobile-list-payment__label">Доп. данные</p>
+											<div class="mobile-list-payment__value">...</div>
+										</div>
+									</div>
+								</div>
+								<div data-spollers class="mobile-list-payment__block">
+									<div data-spoller class="mobile-list-payment__header">
+										<div class="mobile-list-payment__column">
+											<p class="mobile-list-payment__code">1522987_6fee2a0d1aa0f6b4q2f1c...</p>
+											<p class="mobile-list-payment__cart">5*7919</p>
+										</div>
+										<div class="mobile-list-payment__sum">6875,00 <span>UAH</span></div>
+									</div>
+									<div class="mobile-list-payment__content">
+										<div class="mobile-list-payment__line">
+											<p class="mobile-list-payment__label">Номер карты</p>
+											<div class="mobile-list-payment__value">5*7919</div>
+										</div>
+										<div class="mobile-list-payment__line">
+											<p class="mobile-list-payment__label">Платежная система</p>
+											<div class="mobile-list-payment__value">VISA/MC</div>
+										</div>
+										<div class="mobile-list-payment__line">
+											<p class="mobile-list-payment__label">Email</p>
+											<div class="mobile-list-payment__value">romanowiczmira@gmail.com</div>
+										</div>
+										<div class="mobile-list-payment__line">
+											<p class="mobile-list-payment__label">Дата</p>
+											<div class="mobile-list-payment__value">2023.05.25 - 15:20:39</div>
+										</div>
+										<div class="mobile-list-payment__line">
+											<p class="mobile-list-payment__label">Сумма</p>
+											<div class="mobile-list-payment__value">6875,00 <span>UAH</span></div>
+										</div>
+										<div class="mobile-list-payment__line">
+											<p class="mobile-list-payment__label">Статус</p>
+											<div class="mobile-list-payment__status">
+												<div class="payments-list__status-sc">Успешно</div>
+												<div class="payments-list__status-vz">Возмещён</div>
+											</div>
+										</div>
+										<div class="mobile-list-payment__line">
+											<p class="mobile-list-payment__label">Доп. данные</p>
+											<div class="mobile-list-payment__value">...</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div data-tabs-item class="mobile-list-payment__inner">
+								<div data-spollers class="mobile-list-payment__block">
+									<div data-spoller class="mobile-list-payment__header">
+										<div class="mobile-list-payment__column">
+											<p class="mobile-list-payment__code">1522987_6fee2a0d1aa0f6b4q2f1c...</p>
+											<p class="mobile-list-payment__cart">5*7919</p>
+										</div>
+										<div class="mobile-list-payment__sum">6875,00 <span>UAH</span></div>
+									</div>
+									<div class="mobile-list-payment__content">
+										<div class="mobile-list-payment__line">
+											<p class="mobile-list-payment__label">Номер карты</p>
+											<div class="mobile-list-payment__value">5*7919</div>
+										</div>
+										<div class="mobile-list-payment__line">
+											<p class="mobile-list-payment__label">Платежная система</p>
+											<div class="mobile-list-payment__value">VISA/MC</div>
+										</div>
+										<div class="mobile-list-payment__line">
+											<p class="mobile-list-payment__label">Email</p>
+											<div class="mobile-list-payment__value">romanowiczmira@gmail.com</div>
+										</div>
+										<div class="mobile-list-payment__line">
+											<p class="mobile-list-payment__label">Дата</p>
+											<div class="mobile-list-payment__value">2023.05.25 - 15:20:39</div>
+										</div>
+										<div class="mobile-list-payment__line">
+											<p class="mobile-list-payment__label">Сумма</p>
+											<div class="mobile-list-payment__value">6875,00 <span>UAH</span></div>
+										</div>
+										<div class="mobile-list-payment__line">
+											<p class="mobile-list-payment__label">Статус</p>
+											<div class="mobile-list-payment__status">
+												<div class="payments-list__status-sc">Успешно</div>
+												<div class="payments-list__status-vz">Возмещён</div>
+											</div>
+										</div>
+										<div class="mobile-list-payment__line">
+											<p class="mobile-list-payment__label">Доп. данные</p>
+											<div class="mobile-list-payment__value">...</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="nav">
+					<a href="#" class="nav__item icon-menu">
+						<img src="img/font-icons/wartawa.svg" alt="">
+						<p>Wartawa</p>
+					</a>
+					<a href="#" class="nav__item">
+						<img src="img/font-icons/payment.svg" alt="">
+						<p>Платежи</p>
+					</a>
+					<a href="#" class="nav__item">
+						<img src="img/font-icons/merchans.svg" alt="">
+						<p>Мои мерчанты</p>
+					</a>
+					<a href="#" class="nav__item">
+						<img src="img/font-icons/nav-balances.svg" alt="">
+						<p>Балансы</p>
+					</a>
+					<a href="#" class="nav__item">
+						<img src="img/font-icons/nav-invoices.svg" alt="">
+						<p>Инвойсы</p>
+					</a>
+				</div>
+			</main>
+		</div>
+	</div>
+	<script src="js/app.js"></script>
+</body>
+
+</html>
