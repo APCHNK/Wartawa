@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="r">
+
+<head>
+	<title>Настройки пользователя</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="page">
+			<aside data-simplebar class="sidebar">
+				<a href="#" class="sidebar__logo">
+					<img src="img/logo.svg" alt="Логотип">
+				</a>
+				<div class="sidebar__status"><span></span>Верифицирован</div>
+				<nav class="sidebar__menu menu-sidebar">
+					<ul class="menu-sidebar__list">
+						<li><a class="_active" href="#"><img src="img/font-icons/infopanel.svg" alt="">Инфопанель</a></li>
+						<li><a href="#"><img src="img/font-icons/list.svg" alt="">Список мерчантов</a></li>
+						<li><a href="#"><img src="img/font-icons/history.svg" alt="">История платежей</a></li>
+						<li><a href="#"><img src="img/font-icons/balances.svg" alt="">Балансы</a></li>
+						<li><a href="#"><img src="img/font-icons/return.svg" alt="">Вывод средств</a></li>
+						<li><a href="#"><img src="img/font-icons/invoices.svg" alt="">Инвойсы</a></li>
+						<li><a href="#"><img src="img/font-icons/api.svg" alt="">Документация API</a></li>
+						<li><a href="#"><img src="img/font-icons/employees.svg" alt="">Сотрудники</a></li>
+					</ul>
+				</nav>
+			</aside>
+			<main class="main">
+				<header class="header">
+					<div class="header__container">
+						<h1 class="header__title">Настройки пользователя</h1>
+						<div class="header__profil profil-header">
+							<div class="profil-header__langs langs-header">
+                        <span class="langs-header__selected">RU</span>
+                        <div class="langs-header__list">
+                           <span>Язык</span>
+                           <button type="button" class="langs-header__list-close"></button>
+                           <div data-lang="ENG" class="langs-header__lang _eng">English</div>
+                           <div data-lang="UK" class="langs-header__lang _uk">Українська</div>
+                           <div data-lang="CZ" class="langs-header__lang _ch">Čeština</div>
+                           <div data-lang="SK" class="langs-header__lang _sl">Slovenský</div>
+                           <div data-lang="PL" class="langs-header__lang _pl">Polski</div>
+                           <div data-lang="RU" class="langs-header__lang _ru">Русский</div>
+                        </div>
+                     </div>
+                     <div class="profil-header__avatar">
+                        <div class="profil-header__img">
+                           <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M18 0C8.07508 0 0 8.07508 0 18C0 27.9249 8.07508 36 18 36C27.9249 36 36 27.9249 36 18C36 8.07508 27.9249 0 18 0ZM18.1735 8.30769C19.826 8.30769 21.4109 8.96415 22.5794 10.1326C23.7479 11.3011 24.4043 12.886 24.4043 14.5385C24.4043 16.191 23.7479 17.7758 22.5794 18.9443C21.4109 20.1128 19.826 20.7692 18.1735 20.7692C16.521 20.7692 14.9362 20.1128 13.7677 18.9443C12.5992 17.7758 11.9428 16.191 11.9428 14.5385C11.9428 12.886 12.5992 11.3011 13.7677 10.1326C14.9362 8.96415 16.521 8.30769 18.1735 8.30769ZM18 33.2308C15.8994 33.2315 13.8214 32.7966 11.8974 31.9536C9.97334 31.1105 8.24501 29.8777 6.82154 28.3329C7.58585 24.3692 14.4554 23.5385 18 23.5385C21.5446 23.5385 28.4123 24.3692 29.1785 28.3311C27.7553 29.8764 26.0271 31.1097 24.103 31.953C22.1789 32.7964 20.1008 33.2315 18 33.2308Z" fill="#004231"/>
+                           </svg>                              
+                        </div>
+                        <ul class="profil-header__dropdown">
+                           <li>
+                              <a href="#" class="profil-header__dropdown-settings">Настройки пользователя</a>
+                           </li>
+                           <li>
+                              <a href="#" class="profil-header__dropdown-exit">Выход</a>
+                           </li>
+                        </ul>
+                     </div>
+						</div>
+					</div>
+				</header>
+				<div class="main__container">
+					<div class="breadcrumbs">
+						<ul>
+							<li><a href="#">Главная</a></li>
+							<li><a href="#" class="_active">Настройки пользователя</a></li>
+						</ul>
+					</div>
+               <div class="personal__head">Настройки пользователя</div>
+					<div data-tabs class="personal">
+						<nav data-tabs-titles class="personal__nav">
+							<button data-tabs-title type="button" class="personal__nav-button button _tab-active">Личные</button>
+							<button data-tabs-title type="button" class="personal__nav-button button">Сменить пароль</button>
+						</nav>
+						<div data-tabs-body class="personal__content">
+							<form data-tabs-item action="#" class="personal__block">
+                        <div class="personal__title">Личные</div>
+                        <div class="personal__row">
+                           <div class="personal__inp input-personal">
+                              <label for="pesonal-email" class="input-personal__label">Ваш E-Mail</label>
+                              <input id="pesonal-email" type="email" name="email" placeholder="default@email.com">
+                           </div>
+                           <div class="personal__inp input-personal">
+                              <label for="pesonal-tel" class="input-personal__label">Номер телефона</label>
+                              <input id="pesonal-tel" type="tel" name="tel" placeholder="38099484233">
+                           </div>
+                        </div>
+                        <div class="personal__checkbox">
+                           <input id="c_1" data-error="Помилка" class="personal__checkbox-input" type="checkbox" value="1" name="form[]">
+                           <label for="c_1" class="personal__checkbox-label">
+                              <span class="personal__checkbox-text">
+                                 Двухфакторная аутентификация
+                                 <button data-popup="#authentication" type="button">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                       <g clip-path="url(#clip0_72_1002)">
+                                          <path d="M7.9987 1.33337C11.6807 1.33337 14.6654 4.31804 14.6654 8.00004C14.6667 9.75036 13.9797 11.431 12.7526 12.6791C11.5255 13.9273 9.8568 14.6427 8.10671 14.6711C6.35663 14.6995 4.66559 14.0384 3.3987 12.8307C2.1318 11.623 1.39069 9.96548 1.33536 8.21604L1.33203 8.00004L1.3347 7.81337C1.43336 4.21804 4.3787 1.33337 7.9987 1.33337ZM8.00536 10L7.9207 10.0047C7.75867 10.024 7.60933 10.102 7.50097 10.224C7.39262 10.346 7.33277 10.5035 7.33277 10.6667C7.33277 10.8299 7.39262 10.9874 7.50097 11.1094C7.60933 11.2314 7.75867 11.3094 7.9207 11.3287L7.9987 11.3334L8.08336 11.3287C8.2454 11.3094 8.39474 11.2314 8.50309 11.1094C8.61144 10.9874 8.67129 10.8299 8.67129 10.6667C8.67129 10.5035 8.61144 10.346 8.50309 10.224C8.39474 10.102 8.2454 10.024 8.08336 10.0047L8.00536 10ZM7.9987 4.66671C7.83541 4.66673 7.67781 4.72668 7.55578 4.83518C7.43376 4.94369 7.3558 5.09321 7.3367 5.25537L7.33203 5.33337V8.00004L7.3367 8.07804C7.35597 8.24007 7.434 8.38941 7.55601 8.49777C7.67801 8.60612 7.83552 8.66597 7.9987 8.66597C8.16187 8.66597 8.31938 8.60612 8.44139 8.49777C8.56339 8.38941 8.64142 8.24007 8.6607 8.07804L8.66536 8.00004V5.33337L8.6607 5.25537C8.64159 5.09321 8.56364 4.94369 8.44161 4.83518C8.31959 4.72668 8.16199 4.66673 7.9987 4.66671Z" fill="#536460"/>
+                                       </g>
+                                    </svg>
+                                 </button>
+                              </span>
+                           </label>
+                        </div>
+                        <button data-popup="#qr" type="submit" class="personal__save button button-green">Сохранить изменения</button>
+                     </form>
+                     <div data-tabs-item class="personal__block">
+                        <div class="personal__title">Сменить пароль</div>
+                        <div class="personal__column">
+                           <div class="personal__inp input-personal">
+                              <label for="pesonal-password-now" class="input-personal__label">Текущий пароль</label>
+                              <input id="pesonal-password-now" type="password" name="password">
+                           </div>
+                           <div class="personal__inp input-personal">
+                              <label for="pesonal-password-new" class="input-personal__label">Новый пароль</label>
+                              <input id="pesonal-password-new" type="password" name="password">
+                           </div>
+                           <div class="personal__inp input-personal">
+                              <label for="pesonal-password-repe" class="input-personal__label">Подтверждение нового пароля</label>
+                              <input id="pesonal-password-repe" type="password" name="password">
+                           </div>
+                        </div>
+                        <button type="submit" class="personal__save button button-green">Сохранить изменения</button>
+                     </div>
+						</div>
+					</div>
+				</div>
+				<div class="nav">
+					<a href="#" class="nav__item icon-menu">
+						<img src="img/font-icons/wartawa.svg" alt="">
+						<p>Wartawa</p>
+					</a>
+					<a href="#" class="nav__item">
+						<img src="img/font-icons/payment.svg" alt="">
+						<p>Платежи</p>
+					</a>
+					<a href="#" class="nav__item">
+						<img src="img/font-icons/merchans.svg" alt="">
+						<p>Мои мерчанты</p>
+					</a>
+					<a href="#" class="nav__item">
+						<img src="img/font-icons/nav-balances.svg" alt="">
+						<p>Балансы</p>
+					</a>
+					<a href="#" class="nav__item">
+						<img src="img/font-icons/nav-invoices.svg" alt="">
+						<p>Инвойсы</p>
+					</a>
+				</div>
+			</main>
+		</div>
+
+
+
+      <div id="authentication" aria-hidden="true" class="popup">
+         <div class="popup__wrapper">
+            <div class="popup__content authentication-popup">
+               <button data-close type="button" class="popup__close authentication-popup__close"><img src="img/font-icons/close.svg" alt=""></button>
+               <div class="authentication__title">Двухфакторная аутентификация</div>
+               <p class="authentication__subtitle">Установите двухфакторную аутентификацию для дополнительной защиты вашего аккаунта</p>
+               <p class="pauthentication__text">После завершения сессии в личном кабинете, для повторной авторизации потребуется ввод одноразового пароля, который генерируется в приложении Google Authenticator
+                  Установите приложение на ваш телефон:</p>
+               <div class="authentication__row">
+                  <a href="#" class="authentication__link ios"></a>
+                  <a href="#" class="authentication__link android"></a>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div id="qr" aria-hidden="true" class="popup">
+         <div class="popup__wrapper">
+            <div class="popup__content qr-popup">
+               <button data-close type="button" class="popup__close authentication-popup__close"><img src="img/font-icons/close.svg" alt=""></button>
+               <div class="qr__title">OTP</div>
+               <div class="qr__code"></div>
+               <p class="qr__text">1. Отсканируйте QR-код в приложении Google Authenticator</p>
+               <p class="qr__text">2. Введите одноразовый пароль для Fondy из приложения Google Authenticator, чтобы завершить активацию двухфакторной аутентификации</p>
+               <input autocomplete="off" type="number" name="code">
+               <button type="submit" class="qr__button button button-green">Подтвердить</button>
+            </div>
+         </div>
+      </div>
+	</div>
+	<script src="js/app.js"></script>
+</body>
+
+</html>

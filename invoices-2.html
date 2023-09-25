@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="r">
+
+<head>
+   <title>Вывод средств</title>
+   <meta charset="UTF-8">
+   <meta name="format-detection" content="telephone=no">
+   <!-- <style>body{opacity: 0;}</style> -->
+   <link rel="stylesheet" href="css/style.css">
+   <link rel="shortcut icon" href="favicon.ico">
+   <!-- <meta name="robots" content="noindex, nofollow"> -->
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+   <div class="wrapper">
+      <div class="page">
+         <aside data-simplebar class="sidebar">
+            <a href="#" class="sidebar__logo">
+               <img src="img/logo.svg" alt="Логотип">
+            </a>
+            <div class="sidebar__status"><span></span>Верифицирован</div>
+            <nav class="sidebar__menu menu-sidebar">
+               <ul class="menu-sidebar__list">
+                  <li><a class="_active" href="#"><img src="img/font-icons/infopanel.svg" alt="">Инфопанель</a></li>
+                  <li><a href="#"><img src="img/font-icons/list.svg" alt="">Список мерчантов</a></li>
+                  <li><a href="#"><img src="img/font-icons/history.svg" alt="">История платежей</a></li>
+                  <li><a href="#"><img src="img/font-icons/balances.svg" alt="">Балансы</a></li>
+                  <li><a href="#"><img src="img/font-icons/return.svg" alt="">Вывод средств</a></li>
+                  <li><a href="#"><img src="img/font-icons/invoices.svg" alt="">Инвойсы</a></li>
+                  <li><a href="#"><img src="img/font-icons/api.svg" alt="">Документация API</a></li>
+                  <li><a href="#"><img src="img/font-icons/employees.svg" alt="">Сотрудники</a></li>
+               </ul>
+            </nav>
+         </aside>
+         <main class="main">
+            <header class="header">
+               <div class="header__container">
+                  <h1 class="header__title">Инвойсы</h1>
+                  <div class="header__profil profil-header">
+                     <div class="profil-header__langs langs-header">
+                        <span class="langs-header__selected">RU</span>
+                        <div class="langs-header__list">
+                           <span>Язык</span>
+                           <button type="button" class="langs-header__list-close"></button>
+                           <div data-lang="ENG" class="langs-header__lang _eng">English</div>
+                           <div data-lang="UK" class="langs-header__lang _uk">Українська</div>
+                           <div data-lang="CZ" class="langs-header__lang _ch">Čeština</div>
+                           <div data-lang="SK" class="langs-header__lang _sl">Slovenský</div>
+                           <div data-lang="PL" class="langs-header__lang _pl">Polski</div>
+                           <div data-lang="RU" class="langs-header__lang _ru">Русский</div>
+                        </div>
+                     </div>
+                     <div class="profil-header__avatar">
+                        <div class="profil-header__img">
+                           <svg width="36" height="36" viewBox="0 0 36 36" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                 d="M18 0C8.07508 0 0 8.07508 0 18C0 27.9249 8.07508 36 18 36C27.9249 36 36 27.9249 36 18C36 8.07508 27.9249 0 18 0ZM18.1735 8.30769C19.826 8.30769 21.4109 8.96415 22.5794 10.1326C23.7479 11.3011 24.4043 12.886 24.4043 14.5385C24.4043 16.191 23.7479 17.7758 22.5794 18.9443C21.4109 20.1128 19.826 20.7692 18.1735 20.7692C16.521 20.7692 14.9362 20.1128 13.7677 18.9443C12.5992 17.7758 11.9428 16.191 11.9428 14.5385C11.9428 12.886 12.5992 11.3011 13.7677 10.1326C14.9362 8.96415 16.521 8.30769 18.1735 8.30769ZM18 33.2308C15.8994 33.2315 13.8214 32.7966 11.8974 31.9536C9.97334 31.1105 8.24501 29.8777 6.82154 28.3329C7.58585 24.3692 14.4554 23.5385 18 23.5385C21.5446 23.5385 28.4123 24.3692 29.1785 28.3311C27.7553 29.8764 26.0271 31.1097 24.103 31.953C22.1789 32.7964 20.1008 33.2315 18 33.2308Z"
+                                 fill="#004231" />
+                           </svg>
+                        </div>
+                        <ul class="profil-header__dropdown">
+                           <li>
+                              <a href="#" class="profil-header__dropdown-settings">Настройки пользователя</a>
+                           </li>
+                           <li>
+                              <a href="#" class="profil-header__dropdown-exit">Выход</a>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </header>
+            <div class="main__container">
+               <div class="breadcrumbs">
+                  <ul>
+                     <li><a href="#">Главная</a></li>
+                     <li><a href="#" class="_active">История платежей</a></li>
+                  </ul>
+               </div>
+               <div data-tabs class="invoices">
+                  <nav data-tabs-titles class="list-merchants__nav invoices__nav">
+                     <button data-tabs-title type="button" class="invoices-page__button button _tab-active _list">Список</button>
+                     <button data-tabs-title type="button" class="invoices-page__button button _add">
+                        <img src="img/font-icons/add.svg" alt="">
+                        Добавить мерчанта
+                     </button>
+                  </nav>
+                  <div data-tabs-body class="invoices__body">
+                     <div data-tabs-item class="invoices__block invoices-history invoices__block-f">
+                        <div class="invoices-history__title">История инвойсов</div>
+                        <div class="invoices-history__desktop">
+                           <div class="invoices-history__head">
+                              <div class="invoices-history__label invoices-history__label-value">Дата</div>
+                              <div class="invoices-history__label invoices-history__label-value">Merchant</div>
+                              <div class="invoices-history__label invoices-history__label-emails">E-mail</div>
+                              <div class="invoices-history__label invoices-history__label-url">Invoice URL</div>
+                              <div class="invoices-history__label invoices-history__label-value">Сумма</div>
+                              <div class="invoices-history__label invoices-history__label-value">Статус</div>
+                           </div>
+                           <div class="invoices-history__body">
+                              <div class="invoices-history__row">
+                                 <div class="invoices-history__value">19.09.2023 15:52</div>
+                                 <div class="invoices-history__value">2384237</div>
+                                 <ul class="invoices-history__emails">
+                                    <li>test1@mail.com</li>
+                                    <li>romanowiczmira@gmail.com</li>
+                                    <li>t-e@mail.com</li>
+                                    <li>super-larlge-adress-of-user-for test2@mail.com</li>
+                                    <li>test3@mail.com</li>
+                                 </ul>
+                                 <a href="#" class="invoices-history__url">pay.example.com/kwje8245jnhew/</a>
+                                 <div class="invoices-history__value">100 <span>USD</span></div>
+                                 <div class="mobile-history__status -yellow">Ожидает</div>
+                              </div>
+                              <div class="invoices-history__row">
+                                 <div class="invoices-history__value">19.09.2023 15:52</div>
+                                 <div class="invoices-history__value">2384237</div>
+                                 <ul class="invoices-history__emails">
+                                    <li>test1@mail.com</li>
+                                    <li>romanowiczmira@gmail.com</li>
+                                    <li>t-e@mail.com</li>
+                                    <li>super-larlge-adress-of-user-for test2@mail.com</li>
+                                    <li>test3@mail.com</li>
+                                 </ul>
+                                 <a href="#" class="invoices-history__url">pay.example.com/kwje8245jnhew/</a>
+                                 <div class="invoices-history__value">100 <span>USD</span></div>
+                                 <div class="mobile-history__status -green">Успешно</div>
+                              </div>
+                              <div class="invoices-history__row">
+                                 <div class="invoices-history__value">19.09.2023 15:52</div>
+                                 <div class="invoices-history__value">2384237</div>
+                                 <ul class="invoices-history__emails">
+                                    <li>test1@mail.com</li>
+                                    <li>romanowiczmira@gmail.com</li>
+                                    <li>t-e@mail.com</li>
+                                    <li>super-larlge-adress-of-user-for test2@mail.com</li>
+                                    <li>test3@mail.com</li>
+                                 </ul>
+                                 <a href="#" class="invoices-history__url">pay.example.com/kwje8245jnhew/</a>
+                                 <div class="invoices-history__value">100 <span>USD</span></div>
+                                 <div class="mobile-history__status -green">Успешно</div>
+                              </div>
+                              <div class="invoices-history__row">
+                                 <div class="invoices-history__value">19.09.2023 15:52</div>
+                                 <div class="invoices-history__value">2384237</div>
+                                 <ul class="invoices-history__emails">
+                                    <li>test1@mail.com</li>
+                                    <li>romanowiczmira@gmail.com</li>
+                                    <li>t-e@mail.com</li>
+                                    <li>super-larlge-adress-of-user-for test2@mail.com</li>
+                                    <li>test3@mail.com</li>
+                                 </ul>
+                                 <a href="#" class="invoices-history__url">pay.example.com/kwje8245jnhew/</a>
+                                 <div class="invoices-history__value">100 <span>USD</span></div>
+                                 <div class="mobile-history__status -green">Успешно</div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="invoices-history__mobile mobile-history">
+                           <div class="mobile-history__block">
+                              <div class="mobile-history__head">
+                                 <div class="mobile-history__row mobile-history__row-head">
+                                    <span class="mobile-history__date">2023.05.25 - 15:20:39</span>
+                                    <div class="mobile-history__status -green">Успешно</div>
+                                 </div>
+                                 <div class="mobile-history__row mobile-history__row-sum">
+                                    <div class="mobile-history__label">Сумма</div>
+                                    <div class="mobile-history__item">100 <span>USD</span></div>
+                                 </div>
+                              </div>
+                              <div class="mobile-history__body">
+                                 <div class="mobile-history__row">
+                                    <div class="mobile-history__label">Merchant</div>
+                                    <div class="mobile-history__item">5*7919</div>
+                                 </div>
+                                 <div class="mobile-history__row mobile-history__row-emails">
+                                    <div class="mobile-history__label">Email</div>
+                                    <ul class="mobile-history__emails">
+                                       <li>romanowiczmira@gmail.com</li>
+                                       <li>test1@mail.com</li>
+                                       <li>tst@mail.com</li>
+                                       <li>tst@mail.com</li>
+                                    </ul>
+                                 </div>
+                                 <div class="mobile-history__row mobile-history__row-last">
+                                    <div class="mobile-history__label">Invoice URL</div>
+                                    <div class="mobile-history__link">pay.example.com/kwje8245jnhew/</div>
+                                 </div>
+                              </div>
+                              <div class="mobile-history__more _active">See less</div>
+                           </div>
+                           <div class="mobile-history__block">
+                              <div class="mobile-history__head">
+                                 <div class="mobile-history__row mobile-history__row-head">
+                                    <span class="mobile-history__date">2023.05.25 - 15:20:39</span>
+                                    <div class="mobile-history__status -yellow">Ожидает</div>
+                                 </div>
+                                 <div class="mobile-history__row mobile-history__row-sum">
+                                    <div class="mobile-history__label">Сумма</div>
+                                    <div class="mobile-history__item">100 <span>USD</span></div>
+                                 </div>
+                              </div>
+                              <div class="mobile-history__body">
+                                 <div class="mobile-history__row">
+                                    <div class="mobile-history__label">Merchant</div>
+                                    <div class="mobile-history__item">5*7919</div>
+                                 </div>
+                                 <div class="mobile-history__row mobile-history__row-emails">
+                                    <div class="mobile-history__label">Email</div>
+                                    <ul class="mobile-history__emails">
+                                       <li>romanowiczmira@gmail.com</li>
+                                       <li>test1@mail.com</li>
+                                    </ul>
+                                 </div>
+                                 <div class="mobile-history__row mobile-history__row-last">
+                                    <div class="mobile-history__label">Invoice URL</div>
+                                    <div class="mobile-history__link">pay.example.com/kwje8245jnhew/</div>
+                                 </div>
+                              </div>
+                              <div class="mobile-history__more _active">See less</div>
+                           </div>
+                        </div>
+                     </div>
+                     <form action="#" data-tabs-item class="invoices__block">
+                        <div class="invoice__create create-invoices">
+                           <div class="create-invoices__title">Создать инвойс</div>
+                           <div class="create-invoices__content">
+                              <div class="create-invoices__grid">
+                                 <div class="merchants-information__input">
+                                    <div class="merchants-information__label">ID мерчанта</div>
+                                    <select name="id">
+                                       <option data-asset="1522987 Activated" data-asset="Activated" value="1" selected>
+                                          cryptoinvestor.com.ua</option>
+                                       <option data-asset="1522987" value="1">cryptoinvestor.com.ua</option>
+                                       <option data-asset="1522987" value="2">cryptoinvestor.com.ua</option>
+                                       <option data-asset="1522987" value="3">cryptoinvestor.com.ua</option>
+                                    </select>
+                                 </div>
+                                 <div class="create-invoices__date">
+                                    <div class="merchants-information__input">
+                                       <div class="merchants-information__label">Сумма</div>
+                                       <div class="create-invoices__date-row">
+                                          <input type="number" name="sum" placeholder="0.00" class="input input-date">
+                                          <select name="currency">
+                                             <option value="1" selected>UAH</option>
+                                             <option value="2">EUR</option>
+                                             <option value="3">USD</option>
+                                          </select>
+                                       </div>
+                                    </div>
+                                    <div class="merchants-information__input create-invoices__currency">
+                                       <div class="merchants-information__label">Валюта</div>
+                                       <select name="currency">
+                                          <option value="1" selected>UAH</option>
+                                          <option value="2">EUR</option>
+                                          <option value="3">USD</option>
+                                       </select>
+                                    </div>
+                                 </div>
+                                 <div class="merchants-information__input">
+                                    <div class="merchants-information__label">Получатель</div>
+                                    <input type="text" name="web-saite" placeholder="+ добавить Email" class="input">
+                                 </div>
+                                 <div class="merchants-information__input">
+                                    <div class="merchants-information__label">Имя плательщика</div>
+                                    <input type="text" name="web-saite" placeholder="Имя" class="input">
+                                 </div>
+                                 <div class="create-invoices__meta">
+                                    <span>Вы можете кастомизировать внешний вид инвойса, добавив информаию про проект.
+                                       <strong>Добавить логотип и контакты.</strong></span>
+                                 </div>
+                                 <div class="merchants-information__input">
+                                    <div class="merchants-information__label">Номер телефона</div>
+                                    <div class="merchants-information__phone">
+                                       <div class="merchants-information__country">
+                                          <select name="country-number">
+                                             <option data-asset="img/font-icons/country.svg" value="1" selected>+44
+                                             </option>
+                                             <option data-asset="img/font-icons/country.svg" value="2">+48</option>
+                                             <option data-asset="img/font-icons/country.svg" value="3">+3</option>
+                                             <option data-asset="img/font-icons/country.svg" value="4">+380</option>
+                                          </select>
+                                       </div>
+                                       <input type="tel" name="form[]" placeholder="Номер телефона">
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="merchants-information__input textarea-purpose">
+                                 <div class="merchants-information__label">Назначение</div>
+                                 <textarea name="purpose" id="purpose" cols="30" rows="0" placeholder="Назначение"
+                                    class="input"></textarea>
+                              </div>
+                              <div class="create-invoices__line">
+                                 <div class="create-invoices__checkbox">
+                                    <input id="c_4" class="create-invoices-checkbox__input" type="checkbox" value="1"
+                                       name="preauthorization">
+                                    <label for="c_4" class="create-invoices-checkbox__label"><span
+                                          class="create-invoices-checkbox__text">Предавторизация</span></label>
+                                 </div>
+                                 <div class="merchants-information__input">
+                                    <div class="merchants-information__label">Срок действия</div>
+                                    <input type="text" name="web-saite" placeholder="Срок действия" class="input">
+                                 </div>
+                                 <div class="merchants-information__input">
+                                    <div class="merchants-information__label">Язык Email сообщения</div>
+                                    <select name="lang">
+                                       <option value="1" selected>Український</option>
+                                       <option value="2">Англійський</option>
+                                    </select>
+                                 </div>
+                              </div>
+                              <div class="merchants-information__input create-invoices__textarea">
+                                 <div class="merchants-information__label">Сайт</div>
+                                 <textarea name="additionaldata" id="additionaldata" cols="30" rows="0"
+                                    placeholder="Введите дополнительные данные..." class="input"></textarea>
+                              </div>
+                              <button type="submit" class="create-invoices__button button button-green">Создать
+                                 инвойс</button>
+                           </div>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+            </div>
+            <div class="nav">
+               <a href="#" class="nav__item icon-menu">
+                  <img src="img/font-icons/wartawa.svg" alt="">
+                  <p>Wartawa</p>
+               </a>
+               <a href="#" class="nav__item">
+                  <img src="img/font-icons/payment.svg" alt="">
+                  <p>Платежи</p>
+               </a>
+               <a href="#" class="nav__item">
+                  <img src="img/font-icons/merchans.svg" alt="">
+                  <p>Мои мерчанты</p>
+               </a>
+               <a href="#" class="nav__item">
+                  <img src="img/font-icons/nav-balances.svg" alt="">
+                  <p>Балансы</p>
+               </a>
+               <a href="#" class="nav__item">
+                  <img src="img/font-icons/nav-invoices.svg" alt="">
+                  <p>Инвойсы</p>
+               </a>
+            </div>
+         </main>
+      </div>
+   </div>
+   <script src="js/app.js"></script>
+</body>
+
+</html>

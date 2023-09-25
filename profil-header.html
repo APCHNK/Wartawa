@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="r">
+
+<head>
+	<title>Список мерчантов</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="page">
+			<aside data-simplebar class="sidebar">
+				<a href="#" class="sidebar__logo">
+					<img src="img/logo.svg" alt="Логотип">
+				</a>
+				<div class="sidebar__status"><span></span>Верифицирован</div>
+				<nav class="sidebar__menu menu-sidebar">
+					<ul class="menu-sidebar__list">
+						<li><a class="_active" href="#"><img src="img/font-icons/infopanel.svg" alt="">Инфопанель</a></li>
+						<li><a href="#"><img src="img/font-icons/list.svg" alt="">Список мерчантов</a></li>
+						<li><a href="#"><img src="img/font-icons/history.svg" alt="">История платежей</a></li>
+						<li><a href="#"><img src="img/font-icons/balances.svg" alt="">Балансы</a></li>
+						<li><a href="#"><img src="img/font-icons/return.svg" alt="">Вывод средств</a></li>
+						<li><a href="#"><img src="img/font-icons/invoices.svg" alt="">Инвойсы</a></li>
+						<li><a href="#"><img src="img/font-icons/api.svg" alt="">Документация API</a></li>
+						<li><a href="#"><img src="img/font-icons/employees.svg" alt="">Сотрудники</a></li>
+					</ul>
+				</nav>
+			</aside>
+			<main class="main">
+				<header class="header">
+					<div class="header__container">
+						<h1 class="header__title">Список мерчантов</h1>
+						<div class="header__profil profil-header">
+							<div class="profil-header__langs langs-header">
+                        <span class="langs-header__selected">RU</span>
+                        <div class="langs-header__list">
+                           <span>Язык</span>
+                           <button type="button" class="langs-header__list-close"></button>
+                           <div data-lang="ENG" class="langs-header__lang _eng">English</div>
+                           <div data-lang="UK" class="langs-header__lang _uk">Українська</div>
+                           <div data-lang="CZ" class="langs-header__lang _ch">Čeština</div>
+                           <div data-lang="SK" class="langs-header__lang _sl">Slovenský</div>
+                           <div data-lang="PL" class="langs-header__lang _pl">Polski</div>
+                           <div data-lang="RU" class="langs-header__lang _ru">Русский</div>
+                        </div>
+                     </div>
+                     <div class="profil-header__avatar">
+                        <div class="profil-header__img">
+                           <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M18 0C8.07508 0 0 8.07508 0 18C0 27.9249 8.07508 36 18 36C27.9249 36 36 27.9249 36 18C36 8.07508 27.9249 0 18 0ZM18.1735 8.30769C19.826 8.30769 21.4109 8.96415 22.5794 10.1326C23.7479 11.3011 24.4043 12.886 24.4043 14.5385C24.4043 16.191 23.7479 17.7758 22.5794 18.9443C21.4109 20.1128 19.826 20.7692 18.1735 20.7692C16.521 20.7692 14.9362 20.1128 13.7677 18.9443C12.5992 17.7758 11.9428 16.191 11.9428 14.5385C11.9428 12.886 12.5992 11.3011 13.7677 10.1326C14.9362 8.96415 16.521 8.30769 18.1735 8.30769ZM18 33.2308C15.8994 33.2315 13.8214 32.7966 11.8974 31.9536C9.97334 31.1105 8.24501 29.8777 6.82154 28.3329C7.58585 24.3692 14.4554 23.5385 18 23.5385C21.5446 23.5385 28.4123 24.3692 29.1785 28.3311C27.7553 29.8764 26.0271 31.1097 24.103 31.953C22.1789 32.7964 20.1008 33.2315 18 33.2308Z" fill="#004231"/>
+                           </svg>                              
+                        </div>
+                        <ul class="profil-header__dropdown">
+                           <li>
+                              <a href="#" class="profil-header__dropdown-settings">Настройки пользователя</a>
+                           </li>
+                           <li>
+                              <a href="#" class="profil-header__dropdown-exit">Выход</a>
+                           </li>
+                        </ul>
+                     </div>
+						</div>
+					</div>
+				</header>
+				<div class="main__container">
+					<div class="breadcrumbs">
+						<ul>
+							<li><a href="#">Главная</a></li>
+							<li><a href="#">Список мерчантов</a></li>
+							<li><a href="#" class="_active">Поиск мерчантов</a></li>
+						</ul>
+					</div>
+					<div data-tabs class="list-merchants">
+						<h3 class="list-merchants__title section-title">Поиск мерчантов</h3>
+						<nav data-tabs-titles class="list-merchants__nav">
+							<button data-tabs-title type="button" class="list-merchants__list list-merchants__button button _tab-active">Список</button>
+							<button data-tabs-title type="button" class="list-merchants__add list-merchants__button button">
+								<img src="img/font-icons/add.svg" alt="">
+								Добавить мерчанта
+							</button>
+						</nav>
+						<div data-tabs-body class="list-merchants__content">
+							<div data-tabs-item class="list-merchants__block list-merchants__block-f">
+								<div data-da=".mobile-merchants, 600,1" class="list-merchants__search search-merchants">
+									<div class="search-merchants__input input-body">
+										<div class="search-merchants__label input-label">Название мерчанта</div>
+										<input type="text" name="name-merchants" placeholder="Название мерчанта" class="input">
+									</div>
+									<div class="search-merchants__input input-body">
+										<div class="search-merchants__label input-label">Сайт</div>
+										<input type="text" name="name-merchants" placeholder="Сайт" class="input">
+									</div>
+									<div class="search-merchants__input input-body">
+										<div class="search-merchants__label input-label">ID</div>
+										<input type="text" name="name-merchants" placeholder="ID" class="input">
+									</div>
+									<div class="search-merchants__input input-body">
+										<div class="search-merchants__label input-label">Статус</div>
+										<select name="status">
+											<option value="1" selected>Все</option>
+											<option value="2">Пункт №2</option>
+											<option value="3">Пункт №3</option>
+											<option value="4">Пункт №4</option>
+										</select>
+									</div>
+									<div class="search-merchants__input input-body">
+										<div class="search-merchants__label input-label">Тестовый</div>
+										<select name="test">
+											<option value="1" selected>Все</option>
+											<option value="2">Пункт №2</option>
+											<option value="3">Пункт №3</option>
+											<option value="4">Пункт №4</option>
+										</select>
+									</div>
+									<button type="submit" class="search-merchants__button button button-green">Поиск</button>
+								</div>
+								<div class="list-merchants__results results-merchants">
+									<div class="results-merchants__row">
+										<div class="results-merchants__label">test1.com</div>
+										<div class="results-merchants__label">https://test1.com</div>
+										<div class="results-merchants__label">21352932</div>
+										<div class="results-merchants__label">Активный</div>
+										<div class="results-merchants__label">Нет</div>
+										<button type="button" class="results-merchants__settings">Настройка мерчанта</button>
+									</div>
+									<div class="results-merchants__row">
+										<div class="results-merchants__label">test1.com</div>
+										<div class="results-merchants__label">https://test1.com</div>
+										<div class="results-merchants__label">21352932</div>
+										<div class="results-merchants__label">Активный</div>
+										<div class="results-merchants__label">Нет</div>
+										<button type="button" class="results-merchants__settings">Настройка мерчанта</button>
+									</div>
+									<div class="results-merchants__row">
+										<div class="results-merchants__label">test1.com</div>
+										<div class="results-merchants__label">https://test1.com</div>
+										<div class="results-merchants__label">21352932</div>
+										<div class="results-merchants__label">Активный</div>
+										<div class="results-merchants__label">Нет</div>
+										<button type="button" class="results-merchants__settings">Настройка мерчанта</button>
+									</div>
+									<div class="results-merchants__row">
+										<div class="results-merchants__label">test1.com</div>
+										<div class="results-merchants__label">https://test1.com</div>
+										<div class="results-merchants__label">21352932</div>
+										<div class="results-merchants__label">Активный</div>
+										<div class="results-merchants__label">Нет</div>
+										<button type="button" class="results-merchants__settings">Настройка мерчанта</button>
+									</div>
+								</div>
+								<div class="list-merchants__mobile mobile-merchants">
+									<button type="button" class="mobile-merchants__filter">Фильтр</button>
+									<div class="mobile-merchants__content">
+										<div data-spollers class="mobile-merchants__block">
+											<div data-spoller class="mobile-merchants__header">
+												<div class="mobile-merchants__column">
+													<div class="mobile-merchants__slogan">test1.com</div>
+													<div class="mobile-merchants__mail">https://test1.com</div>
+												</div>
+												<div class="mobile-merchants__icon">
+													<img src="img/font-icons/setings.svg" alt="">
+												</div>
+											</div>
+											<div class="mobile-merchants__items">
+												<div class="mobile-merchants__item">
+													<div class="mobile-merchants__label">Сайт</div>
+													<div class="mobile-merchants__data">https://test1.com</div>
+												</div>
+												<div class="mobile-merchants__item">
+													<div class="mobile-merchants__label">ID</div>
+													<div class="mobile-merchants__data">21352932</div>
+												</div>
+												<div class="mobile-merchants__item">
+													<div class="mobile-merchants__label">Статус</div>
+													<div class="mobile-merchants__data">Активный</div>
+												</div>
+												<div class="mobile-merchants__item">
+													<div class="mobile-merchants__label">Тестовый</div>
+													<div class="mobile-merchants__data">Нет</div>
+												</div>
+											</div>
+										</div>
+										<div data-spollers class="mobile-merchants__block">
+											<div data-spoller class="mobile-merchants__header">
+												<div class="mobile-merchants__column">
+													<div class="mobile-merchants__slogan">test1.com</div>
+													<div class="mobile-merchants__mail">https://test1.com</div>
+												</div>
+												<div class="mobile-merchants__icon">
+													<img src="img/font-icons/setings.svg" alt="">
+												</div>
+											</div>
+											<div class="mobile-merchants__items">
+												<div class="mobile-merchants__item">
+													<div class="mobile-merchants__label">Сайт</div>
+													<div class="mobile-merchants__data">https://test1.com</div>
+												</div>
+												<div class="mobile-merchants__item">
+													<div class="mobile-merchants__label">ID</div>
+													<div class="mobile-merchants__data">21352932</div>
+												</div>
+												<div class="mobile-merchants__item">
+													<div class="mobile-merchants__label">Статус</div>
+													<div class="mobile-merchants__data">Активный</div>
+												</div>
+												<div class="mobile-merchants__item">
+													<div class="mobile-merchants__label">Тестовый</div>
+													<div class="mobile-merchants__data">Нет</div>
+												</div>
+											</div>
+										</div>
+										<div data-spollers class="mobile-merchants__block">
+											<div data-spoller class="mobile-merchants__header">
+												<div class="mobile-merchants__column">
+													<div class="mobile-merchants__slogan">test1.com</div>
+													<div class="mobile-merchants__mail">https://test1.com</div>
+												</div>
+												<div class="mobile-merchants__icon">
+													<img src="img/font-icons/setings.svg" alt="">
+												</div>
+											</div>
+											<div class="mobile-merchants__items">
+												<div class="mobile-merchants__item">
+													<div class="mobile-merchants__label">Сайт</div>
+													<div class="mobile-merchants__data">https://test1.com</div>
+												</div>
+												<div class="mobile-merchants__item">
+													<div class="mobile-merchants__label">ID</div>
+													<div class="mobile-merchants__data">21352932</div>
+												</div>
+												<div class="mobile-merchants__item">
+													<div class="mobile-merchants__label">Статус</div>
+													<div class="mobile-merchants__data">Активный</div>
+												</div>
+												<div class="mobile-merchants__item">
+													<div class="mobile-merchants__label">Тестовый</div>
+													<div class="mobile-merchants__data">Нет</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div data-tabs-item class="list-merchants__block">
+								<div class="list-merchants__create create-merchants">
+									<div class="create-merchants__head">Создать нового мерчанта</div>
+									<div class="create-merchants__select">
+										<select name="registration">
+											<option value="1" selected>Выберите страну регистрации</option>
+											<option value="2">Болгария</option>
+											<option value="3">Ватикан</option>
+											<option value="4">Великобритания</option>
+										</select>
+									</div>
+								</div>
+								<button data-da=".create-merchants, 768" type="submit" class="list-merchants__next button button-green">Продолжить</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="nav">
+					<a href="#" class="nav__item icon-menu">
+						<img src="img/font-icons/wartawa.svg" alt="">
+						<p>Wartawa</p>
+					</a>
+					<a href="#" class="nav__item">
+						<img src="img/font-icons/payment.svg" alt="">
+						<p>Платежи</p>
+					</a>
+					<a href="#" class="nav__item">
+						<img src="img/font-icons/merchans.svg" alt="">
+						<p>Мои мерчанты</p>
+					</a>
+					<a href="#" class="nav__item">
+						<img src="img/font-icons/nav-balances.svg" alt="">
+						<p>Балансы</p>
+					</a>
+					<a href="#" class="nav__item">
+						<img src="img/font-icons/nav-invoices.svg" alt="">
+						<p>Инвойсы</p>
+					</a>
+				</div>
+			</main>
+		</div>
+	</div>
+	<script src="js/app.js"></script>
+</body>
+
+</html>

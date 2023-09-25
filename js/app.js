@@ -21,12 +21,12 @@
         function isWebp() {
             function testWebP(callback) {
                 let webP = new Image;
-                webP.onload = webP.onerror = function() {
+                webP.onload = webP.onerror = function () {
                     callback(webP.height == 2);
                 };
                 webP.src = "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA";
             }
-            testWebP((function(support) {
+            testWebP((function (support) {
                 let className = support === true ? "webp" : "no-webp";
                 document.documentElement.classList.add(className);
             }));
@@ -124,7 +124,7 @@
                     document.documentElement.classList.remove("lock");
                 }), delay);
                 bodyLockStatus = false;
-                setTimeout((function() {
+                setTimeout((function () {
                     bodyLockStatus = true;
                 }), delay);
             }
@@ -140,7 +140,7 @@
                 body.style.paddingRight = window.innerWidth - document.querySelector(".wrapper").offsetWidth + "px";
                 document.documentElement.classList.add("lock");
                 bodyLockStatus = false;
-                setTimeout((function() {
+                setTimeout((function () {
                     bodyLockStatus = true;
                 }), delay);
             }
@@ -148,13 +148,13 @@
         function spollers() {
             const spollersArray = document.querySelectorAll("[data-spollers]");
             if (spollersArray.length > 0) {
-                const spollersRegular = Array.from(spollersArray).filter((function(item, index, self) {
+                const spollersRegular = Array.from(spollersArray).filter((function (item, index, self) {
                     return !item.dataset.spollers.split(",")[0];
                 }));
                 if (spollersRegular.length) initSpollers(spollersRegular);
                 let mdQueriesArray = dataMediaQueries(spollersArray, "spollers");
                 if (mdQueriesArray && mdQueriesArray.length) mdQueriesArray.forEach((mdQueriesItem => {
-                    mdQueriesItem.matchMedia.addEventListener("change", (function() {
+                    mdQueriesItem.matchMedia.addEventListener("change", (function () {
                         initSpollers(mdQueriesItem.itemsArray, mdQueriesItem.matchMedia);
                     }));
                     initSpollers(mdQueriesItem.itemsArray, mdQueriesItem.matchMedia);
@@ -212,7 +212,7 @@
                     }
                 }
                 const spollersClose = document.querySelectorAll("[data-spoller-close]");
-                if (spollersClose.length) document.addEventListener("click", (function(e) {
+                if (spollersClose.length) document.addEventListener("click", (function (e) {
                     const el = e.target;
                     if (!el.closest("[data-spollers]")) spollersClose.forEach((spollerClose => {
                         const spollersBlock = spollerClose.closest("[data-spollers]");
@@ -239,7 +239,7 @@
                 }));
                 let mdQueriesArray = dataMediaQueries(tabs, "tabs");
                 if (mdQueriesArray && mdQueriesArray.length) mdQueriesArray.forEach((mdQueriesItem => {
-                    mdQueriesItem.matchMedia.addEventListener("change", (function() {
+                    mdQueriesItem.matchMedia.addEventListener("change", (function () {
                         setTitlePosition(mdQueriesItem.itemsArray, mdQueriesItem.matchMedia);
                     }));
                     setTitlePosition(mdQueriesItem.itemsArray, mdQueriesItem.matchMedia);
@@ -323,7 +323,7 @@
             }
         }
         function menuInit() {
-            if (document.querySelector(".icon-menu")) document.addEventListener("click", (function(e) {
+            if (document.querySelector(".icon-menu")) document.addEventListener("click", (function (e) {
                 if (bodyLockStatus && e.target.closest(".icon-menu")) {
                     bodyLockToggle();
                     document.documentElement.classList.toggle("menu-open");
@@ -336,12 +336,12 @@
             }), 0);
         }
         function uniqArray(array) {
-            return array.filter((function(item, index, self) {
+            return array.filter((function (item, index, self) {
                 return self.indexOf(item) === index;
             }));
         }
         function dataMediaQueries(array, dataSetValue) {
-            const media = Array.from(array).filter((function(item, index, self) {
+            const media = Array.from(array).filter((function (item, index, self) {
                 if (item.dataset[dataSetValue]) return item.dataset[dataSetValue].split(",")[0];
             }));
             if (media.length) {
@@ -355,7 +355,7 @@
                     breakpoint.item = item;
                     breakpointsArray.push(breakpoint);
                 }));
-                let mdQueries = breakpointsArray.map((function(item) {
+                let mdQueries = breakpointsArray.map((function (item) {
                     return "(" + item.type + "-width: " + item.value + "px)," + item.value + "," + item.type;
                 }));
                 mdQueries = uniqArray(mdQueries);
@@ -366,7 +366,7 @@
                         const mediaBreakpoint = paramsArray[1];
                         const mediaType = paramsArray[2];
                         const matchMedia = window.matchMedia(paramsArray[0]);
-                        const itemsArray = breakpointsArray.filter((function(item) {
+                        const itemsArray = breakpointsArray.filter((function (item) {
                             if (item.value === mediaBreakpoint && item.type === mediaType) return true;
                         }));
                         mdQueriesArray.push({
@@ -403,10 +403,10 @@
                         goHash: true
                     },
                     on: {
-                        beforeOpen: function() {},
-                        afterOpen: function() {},
-                        beforeClose: function() {},
-                        afterClose: function() {}
+                        beforeOpen: function () { },
+                        afterOpen: function () { },
+                        beforeClose: function () { },
+                        afterClose: function () { }
                     }
                 };
                 this.youTubeCode;
@@ -428,7 +428,7 @@
                 this._reopen = false;
                 this._selectorOpen = false;
                 this.lastFocusEl = false;
-                this._focusEl = [ "a[href]", 'input:not([disabled]):not([type="hidden"]):not([aria-hidden])', "button:not([disabled]):not([aria-hidden])", "select:not([disabled]):not([aria-hidden])", "textarea:not([disabled]):not([aria-hidden])", "area[href]", "iframe", "object", "embed", "[contenteditable]", '[tabindex]:not([tabindex^="-"])' ];
+                this._focusEl = ["a[href]", 'input:not([disabled]):not([type="hidden"]):not([aria-hidden])', "button:not([disabled]):not([aria-hidden])", "select:not([disabled]):not([aria-hidden])", "textarea:not([disabled]):not([aria-hidden])", "area[href]", "iframe", "object", "embed", "[contenteditable]", '[tabindex]:not([tabindex^="-"])'];
                 this.options = {
                     ...config,
                     ...options,
@@ -453,7 +453,7 @@
                 this.eventsPopup();
             }
             eventsPopup() {
-                document.addEventListener("click", function(e) {
+                document.addEventListener("click", function (e) {
                     const buttonOpen = e.target.closest(`[${this.options.attributeOpenButton}]`);
                     if (buttonOpen) {
                         e.preventDefault();
@@ -475,7 +475,7 @@
                         return;
                     }
                 }.bind(this));
-                document.addEventListener("keydown", function(e) {
+                document.addEventListener("keydown", function (e) {
                     if (this.options.closeEsc && e.which == 27 && e.code === "Escape" && this.isOpen) {
                         e.preventDefault();
                         this.close();
@@ -487,10 +487,10 @@
                     }
                 }.bind(this));
                 if (this.options.hashSettings.goHash) {
-                    window.addEventListener("hashchange", function() {
+                    window.addEventListener("hashchange", function () {
                         if (window.location.hash) this._openToHash(); else this.close(this.targetOpen.selector);
                     }.bind(this));
-                    window.addEventListener("load", function() {
+                    window.addEventListener("load", function () {
                         if (window.location.hash) this._openToHash();
                     }.bind(this));
                 }
@@ -745,16 +745,16 @@
                 selectItems.forEach(((originalSelect, index) => {
                     this.selectInit(originalSelect, index + 1);
                 }));
-                document.addEventListener("click", function(e) {
+                document.addEventListener("click", function (e) {
                     this.selectsActions(e);
                 }.bind(this));
-                document.addEventListener("keydown", function(e) {
+                document.addEventListener("keydown", function (e) {
                     this.selectsActions(e);
                 }.bind(this));
-                document.addEventListener("focusin", function(e) {
+                document.addEventListener("focusin", function (e) {
                     this.selectsActions(e);
                 }.bind(this));
-                document.addEventListener("focusout", function(e) {
+                document.addEventListener("focusout", function (e) {
                     this.selectsActions(e);
                 }.bind(this));
             }
@@ -777,7 +777,7 @@
                 this.selectBuild(originalSelect);
                 originalSelect.dataset.speed = originalSelect.dataset.speed ? originalSelect.dataset.speed : this.config.speed;
                 this.config.speed = +originalSelect.dataset.speed;
-                originalSelect.addEventListener("change", (function(e) {
+                originalSelect.addEventListener("change", (function (e) {
                     _this.selectChange(e);
                 }));
             }
@@ -1031,7 +1031,7 @@
                 const selectOptions = this.getSelectElement(selectItem, this.selectClasses.classSelectOptions).selectElement;
                 const selectOptionsItems = selectOptions.querySelectorAll(`.${this.selectClasses.classSelectOption} `);
                 const _this = this;
-                selectInput.addEventListener("input", (function() {
+                selectInput.addEventListener("input", (function () {
                     selectOptionsItems.forEach((selectOptionsItem => {
                         if (selectOptionsItem.textContent.toUpperCase().includes(selectInput.value.toUpperCase())) selectOptionsItem.hidden = false; else selectOptionsItem.hidden = true;
                     }));
@@ -1061,14 +1061,14 @@
         var freeSelf = typeof self == "object" && self && self.Object === Object && self;
         var root = _freeGlobal || freeSelf || Function("return this")();
         const _root = root;
-        var now = function() {
+        var now = function () {
             return _root.Date.now();
         };
         const lodash_es_now = now;
         var reWhitespace = /\s/;
         function trimmedEndIndex(string) {
             var index = string.length;
-            while (index-- && reWhitespace.test(string.charAt(index))) ;
+            while (index-- && reWhitespace.test(string.charAt(index)));
             return index;
         }
         const _trimmedEndIndex = trimmedEndIndex;
@@ -1088,7 +1088,7 @@
             try {
                 value[symToStringTag] = void 0;
                 var unmasked = true;
-            } catch (e) {}
+            } catch (e) { }
             var result = nativeObjectToString.call(value);
             if (unmasked) if (isOwn) value[symToStringTag] = tag; else delete value[symToStringTag];
             return result;
@@ -1221,7 +1221,7 @@
             });
         }
         const lodash_es_throttle = throttle;
-        var __assign = function() {
+        var __assign = function () {
             __assign = Object.assign || function __assign(t) {
                 for (var s, i = 1, n = arguments.length; i < n; i++) {
                     s = arguments[i];
@@ -1233,7 +1233,7 @@
         };
         var cachedScrollbarWidth = null;
         var cachedDevicePixelRatio = null;
-        if (can_use_dom) window.addEventListener("resize", (function() {
+        if (can_use_dom) window.addEventListener("resize", (function () {
             if (cachedDevicePixelRatio !== window.devicePixelRatio) {
                 cachedDevicePixelRatio = window.devicePixelRatio;
                 cachedScrollbarWidth = null;
@@ -1263,29 +1263,29 @@
             if (!element || !element.ownerDocument) return document;
             return element.ownerDocument;
         }
-        var getOptions$1 = function(obj) {
+        var getOptions$1 = function (obj) {
             var initialObj = {};
-            var options = Array.prototype.reduce.call(obj, (function(acc, attribute) {
+            var options = Array.prototype.reduce.call(obj, (function (acc, attribute) {
                 var option = attribute.name.match(/data-simplebar-(.+)/);
                 if (option) {
-                    var key = option[1].replace(/\W+(.)/g, (function(_, chr) {
+                    var key = option[1].replace(/\W+(.)/g, (function (_, chr) {
                         return chr.toUpperCase();
                     }));
                     switch (attribute.value) {
-                      case "true":
-                        acc[key] = true;
-                        break;
+                        case "true":
+                            acc[key] = true;
+                            break;
 
-                      case "false":
-                        acc[key] = false;
-                        break;
+                        case "false":
+                            acc[key] = false;
+                            break;
 
-                      case void 0:
-                        acc[key] = true;
-                        break;
+                        case void 0:
+                            acc[key] = true;
+                            break;
 
-                      default:
-                        acc[key] = attribute.value;
+                        default:
+                            acc[key] = attribute.value;
                     }
                 }
                 return acc;
@@ -1299,7 +1299,7 @@
         }
         function removeClasses$1(el, classes) {
             if (!el) return;
-            classes.split(" ").forEach((function(className) {
+            classes.split(" ").forEach((function (className) {
                 el.classList.remove(className);
             }));
         }
@@ -1316,7 +1316,7 @@
             classNamesToQuery: classNamesToQuery$1
         });
         var getElementWindow = getElementWindow$1, getElementDocument = getElementDocument$1, getOptions = getOptions$1, addClasses = addClasses$1, dist_removeClasses = removeClasses$1, classNamesToQuery = classNamesToQuery$1;
-        var SimpleBarCore = function() {
+        var SimpleBarCore = function () {
             function SimpleBarCore(element, options) {
                 if (options === void 0) options = {};
                 var _this = this;
@@ -1343,11 +1343,11 @@
                 this.isRtl = null;
                 this.mouseX = 0;
                 this.mouseY = 0;
-                this.onMouseMove = function() {};
-                this.onWindowResize = function() {};
-                this.onStopScrolling = function() {};
-                this.onMouseEntered = function() {};
-                this.onScroll = function() {
+                this.onMouseMove = function () { };
+                this.onWindowResize = function () { };
+                this.onStopScrolling = function () { };
+                this.onMouseEntered = function () { };
+                this.onScroll = function () {
                     var elWindow = getElementWindow(_this.el);
                     if (!_this.scrollXTicking) {
                         elWindow.requestAnimationFrame(_this.scrollX);
@@ -1365,15 +1365,15 @@
                     _this.showScrollbar("y");
                     _this.onStopScrolling();
                 };
-                this.scrollX = function() {
+                this.scrollX = function () {
                     if (_this.axis.x.isOverflowing) _this.positionScrollbar("x");
                     _this.scrollXTicking = false;
                 };
-                this.scrollY = function() {
+                this.scrollY = function () {
                     if (_this.axis.y.isOverflowing) _this.positionScrollbar("y");
                     _this.scrollYTicking = false;
                 };
-                this._onStopScrolling = function() {
+                this._onStopScrolling = function () {
                     dist_removeClasses(_this.el, _this.classNames.scrolling);
                     if (_this.options.autoHide) {
                         _this.hideScrollbar("x");
@@ -1381,7 +1381,7 @@
                     }
                     _this.isScrolling = false;
                 };
-                this.onMouseEnter = function() {
+                this.onMouseEnter = function () {
                     if (!_this.isMouseEntering) {
                         addClasses(_this.el, _this.classNames.mouseEntered);
                         _this.showScrollbar("x");
@@ -1390,7 +1390,7 @@
                     }
                     _this.onMouseEntered();
                 };
-                this._onMouseEntered = function() {
+                this._onMouseEntered = function () {
                     dist_removeClasses(_this.el, _this.classNames.mouseEntered);
                     if (_this.options.autoHide) {
                         _this.hideScrollbar("x");
@@ -1398,24 +1398,24 @@
                     }
                     _this.isMouseEntering = false;
                 };
-                this._onMouseMove = function(e) {
+                this._onMouseMove = function (e) {
                     _this.mouseX = e.clientX;
                     _this.mouseY = e.clientY;
                     if (_this.axis.x.isOverflowing || _this.axis.x.forceVisible) _this.onMouseMoveForAxis("x");
                     if (_this.axis.y.isOverflowing || _this.axis.y.forceVisible) _this.onMouseMoveForAxis("y");
                 };
-                this.onMouseLeave = function() {
+                this.onMouseLeave = function () {
                     _this.onMouseMove.cancel();
                     if (_this.axis.x.isOverflowing || _this.axis.x.forceVisible) _this.onMouseLeaveForAxis("x");
                     if (_this.axis.y.isOverflowing || _this.axis.y.forceVisible) _this.onMouseLeaveForAxis("y");
                     _this.mouseX = -1;
                     _this.mouseY = -1;
                 };
-                this._onWindowResize = function() {
+                this._onWindowResize = function () {
                     _this.scrollbarWidth = _this.getScrollbarWidth();
                     _this.hideNativeScrollbar();
                 };
-                this.onPointerEvent = function(e) {
+                this.onPointerEvent = function (e) {
                     if (!_this.axis.x.track.el || !_this.axis.y.track.el || !_this.axis.x.scrollbar.el || !_this.axis.y.scrollbar.el) return;
                     var isWithinTrackXBounds, isWithinTrackYBounds;
                     _this.axis.x.track.rect = _this.axis.x.track.el.getBoundingClientRect();
@@ -1436,7 +1436,7 @@
                         }
                     }
                 };
-                this.drag = function(e) {
+                this.drag = function (e) {
                     var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l;
                     if (!_this.draggedAxis || !_this.contentWrapperEl) return;
                     var eventOffset;
@@ -1455,7 +1455,7 @@
                     if (_this.draggedAxis === "x" && _this.isRtl) scrollPos = ((_l = SimpleBarCore.getRtlHelpers()) === null || _l === void 0 ? void 0 : _l.isScrollingToNegative) ? -scrollPos : scrollPos;
                     _this.contentWrapperEl[_this.axis[_this.draggedAxis].scrollOffsetAttr] = scrollPos;
                 };
-                this.onEndDrag = function(e) {
+                this.onEndDrag = function (e) {
                     var elDocument = getElementDocument(_this.el);
                     var elWindow = getElementWindow(_this.el);
                     e.preventDefault();
@@ -1463,13 +1463,13 @@
                     dist_removeClasses(_this.el, _this.classNames.dragging);
                     elDocument.removeEventListener("mousemove", _this.drag, true);
                     elDocument.removeEventListener("mouseup", _this.onEndDrag, true);
-                    _this.removePreventClickId = elWindow.setTimeout((function() {
+                    _this.removePreventClickId = elWindow.setTimeout((function () {
                         elDocument.removeEventListener("click", _this.preventClick, true);
                         elDocument.removeEventListener("dblclick", _this.preventClick, true);
                         _this.removePreventClickId = null;
                     }));
                 };
-                this.preventClick = function(e) {
+                this.preventClick = function (e) {
                     e.preventDefault();
                     e.stopPropagation();
                 };
@@ -1533,7 +1533,7 @@
                 this.onMouseEntered = lodash_es_debounce(this._onMouseEntered, this.stopScrollDelay);
                 this.init();
             }
-            SimpleBarCore.getRtlHelpers = function() {
+            SimpleBarCore.getRtlHelpers = function () {
                 if (SimpleBarCore.rtlHelpers) return SimpleBarCore.rtlHelpers;
                 var dummyDiv = document.createElement("div");
                 dummyDiv.innerHTML = '<div class="simplebar-dummy-scrollbar-size"><div></div></div>';
@@ -1553,14 +1553,14 @@
                 };
                 return SimpleBarCore.rtlHelpers;
             };
-            SimpleBarCore.prototype.getScrollbarWidth = function() {
+            SimpleBarCore.prototype.getScrollbarWidth = function () {
                 try {
                     if (this.contentWrapperEl && getComputedStyle(this.contentWrapperEl, "::-webkit-scrollbar").display === "none" || "scrollbarWidth" in document.documentElement.style || "-ms-overflow-style" in document.documentElement.style) return 0; else return scrollbarWidth();
                 } catch (e) {
                     return scrollbarWidth();
                 }
             };
-            SimpleBarCore.getOffset = function(el) {
+            SimpleBarCore.getOffset = function (el) {
                 var rect = el.getBoundingClientRect();
                 var elDocument = getElementDocument(el);
                 var elWindow = getElementWindow(el);
@@ -1569,7 +1569,7 @@
                     left: rect.left + (elWindow.pageXOffset || elDocument.documentElement.scrollLeft)
                 };
             };
-            SimpleBarCore.prototype.init = function() {
+            SimpleBarCore.prototype.init = function () {
                 if (can_use_dom) {
                     this.initDOM();
                     this.rtlHelpers = SimpleBarCore.getRtlHelpers();
@@ -1578,7 +1578,7 @@
                     this.initListeners();
                 }
             };
-            SimpleBarCore.prototype.initDOM = function() {
+            SimpleBarCore.prototype.initDOM = function () {
                 var _a, _b;
                 this.wrapperEl = this.el.querySelector(classNamesToQuery(this.classNames.wrapper));
                 this.contentWrapperEl = this.options.scrollableNode || this.el.querySelector(classNamesToQuery(this.classNames.contentWrapper));
@@ -1597,7 +1597,7 @@
                     addClasses(this.axis.y.scrollbar.el, this.classNames.visible);
                 }
             };
-            SimpleBarCore.prototype.initListeners = function() {
+            SimpleBarCore.prototype.initListeners = function () {
                 var _this = this;
                 var _a;
                 var elWindow = getElementWindow(this.el);
@@ -1611,20 +1611,20 @@
                 if (window.ResizeObserver) {
                     var resizeObserverStarted_1 = false;
                     var resizeObserver = elWindow.ResizeObserver || ResizeObserver;
-                    this.resizeObserver = new resizeObserver((function() {
+                    this.resizeObserver = new resizeObserver((function () {
                         if (!resizeObserverStarted_1) return;
-                        elWindow.requestAnimationFrame((function() {
+                        elWindow.requestAnimationFrame((function () {
                             _this.recalculate();
                         }));
                     }));
                     this.resizeObserver.observe(this.el);
                     this.resizeObserver.observe(this.contentEl);
-                    elWindow.requestAnimationFrame((function() {
+                    elWindow.requestAnimationFrame((function () {
                         resizeObserverStarted_1 = true;
                     }));
                 }
-                this.mutationObserver = new elWindow.MutationObserver((function() {
-                    elWindow.requestAnimationFrame((function() {
+                this.mutationObserver = new elWindow.MutationObserver((function () {
+                    elWindow.requestAnimationFrame((function () {
                         _this.recalculate();
                     }));
                 }));
@@ -1634,7 +1634,7 @@
                     characterData: true
                 });
             };
-            SimpleBarCore.prototype.recalculate = function() {
+            SimpleBarCore.prototype.recalculate = function () {
                 if (!this.heightAutoObserverEl || !this.contentEl || !this.contentWrapperEl || !this.wrapperEl || !this.placeholderEl) return;
                 var elWindow = getElementWindow(this.el);
                 this.elStyles = elWindow.getComputedStyle(this.el);
@@ -1673,7 +1673,7 @@
                 this.toggleTrackVisibility("x");
                 this.toggleTrackVisibility("y");
             };
-            SimpleBarCore.prototype.getScrollbarSize = function(axis) {
+            SimpleBarCore.prototype.getScrollbarSize = function (axis) {
                 var _a, _b;
                 if (axis === void 0) axis = "y";
                 if (!this.axis[axis].isOverflowing || !this.contentEl) return 0;
@@ -1685,7 +1685,7 @@
                 if (this.options.scrollbarMaxSize) scrollbarSize = Math.min(scrollbarSize, this.options.scrollbarMaxSize);
                 return scrollbarSize;
             };
-            SimpleBarCore.prototype.positionScrollbar = function(axis) {
+            SimpleBarCore.prototype.positionScrollbar = function (axis) {
                 var _a, _b, _c;
                 if (axis === void 0) axis = "y";
                 var scrollbar = this.axis[axis].scrollbar;
@@ -1701,7 +1701,7 @@
                 handleOffset = axis === "x" && this.isRtl ? -handleOffset + (trackSize - scrollbar.size) : handleOffset;
                 scrollbar.el.style.transform = axis === "x" ? "translate3d(".concat(handleOffset, "px, 0, 0)") : "translate3d(0, ".concat(handleOffset, "px, 0)");
             };
-            SimpleBarCore.prototype.toggleTrackVisibility = function(axis) {
+            SimpleBarCore.prototype.toggleTrackVisibility = function (axis) {
                 if (axis === void 0) axis = "y";
                 var track = this.axis[axis].track.el;
                 var scrollbar = this.axis[axis].scrollbar.el;
@@ -1717,26 +1717,26 @@
                 }
                 if (this.axis[axis].isOverflowing) scrollbar.style.display = "block"; else scrollbar.style.display = "none";
             };
-            SimpleBarCore.prototype.showScrollbar = function(axis) {
+            SimpleBarCore.prototype.showScrollbar = function (axis) {
                 if (axis === void 0) axis = "y";
                 if (this.axis[axis].isOverflowing && !this.axis[axis].scrollbar.isVisible) {
                     addClasses(this.axis[axis].scrollbar.el, this.classNames.visible);
                     this.axis[axis].scrollbar.isVisible = true;
                 }
             };
-            SimpleBarCore.prototype.hideScrollbar = function(axis) {
+            SimpleBarCore.prototype.hideScrollbar = function (axis) {
                 if (axis === void 0) axis = "y";
                 if (this.axis[axis].isOverflowing && this.axis[axis].scrollbar.isVisible) {
                     dist_removeClasses(this.axis[axis].scrollbar.el, this.classNames.visible);
                     this.axis[axis].scrollbar.isVisible = false;
                 }
             };
-            SimpleBarCore.prototype.hideNativeScrollbar = function() {
+            SimpleBarCore.prototype.hideNativeScrollbar = function () {
                 if (!this.offsetEl) return;
                 this.offsetEl.style[this.isRtl ? "left" : "right"] = this.axis.y.isOverflowing || this.axis.y.forceVisible ? "-".concat(this.scrollbarWidth, "px") : "0px";
                 this.offsetEl.style.bottom = this.axis.x.isOverflowing || this.axis.x.forceVisible ? "-".concat(this.scrollbarWidth, "px") : "0px";
             };
-            SimpleBarCore.prototype.onMouseMoveForAxis = function(axis) {
+            SimpleBarCore.prototype.onMouseMoveForAxis = function (axis) {
                 if (axis === void 0) axis = "y";
                 var currentAxis = this.axis[axis];
                 if (!currentAxis.track.el || !currentAxis.scrollbar.el) return;
@@ -1751,13 +1751,13 @@
                     if (this.options.autoHide) this.hideScrollbar(axis);
                 }
             };
-            SimpleBarCore.prototype.onMouseLeaveForAxis = function(axis) {
+            SimpleBarCore.prototype.onMouseLeaveForAxis = function (axis) {
                 if (axis === void 0) axis = "y";
                 dist_removeClasses(this.axis[axis].track.el, this.classNames.hover);
                 dist_removeClasses(this.axis[axis].scrollbar.el, this.classNames.hover);
                 if (this.options.autoHide) this.hideScrollbar(axis);
             };
-            SimpleBarCore.prototype.onDragStart = function(e, axis) {
+            SimpleBarCore.prototype.onDragStart = function (e, axis) {
                 var _a;
                 if (axis === void 0) axis = "y";
                 var elDocument = getElementDocument(this.el);
@@ -1777,7 +1777,7 @@
                     this.removePreventClickId = null;
                 }
             };
-            SimpleBarCore.prototype.onTrackClick = function(e, axis) {
+            SimpleBarCore.prototype.onTrackClick = function (e, axis) {
                 var _this = this;
                 var _a, _b, _c, _d;
                 if (axis === void 0) axis = "y";
@@ -1794,7 +1794,7 @@
                 var dir = t < 0 ? -1 : 1;
                 var scrollSize = dir === -1 ? scrolled - hostSize : scrolled + hostSize;
                 var speed = 40;
-                var scrollTo = function() {
+                var scrollTo = function () {
                     if (!_this.contentWrapperEl) return;
                     if (dir === -1) {
                         if (scrolled > scrollSize) {
@@ -1810,13 +1810,13 @@
                 };
                 scrollTo();
             };
-            SimpleBarCore.prototype.getContentElement = function() {
+            SimpleBarCore.prototype.getContentElement = function () {
                 return this.contentEl;
             };
-            SimpleBarCore.prototype.getScrollElement = function() {
+            SimpleBarCore.prototype.getScrollElement = function () {
                 return this.contentWrapperEl;
             };
-            SimpleBarCore.prototype.removeListeners = function() {
+            SimpleBarCore.prototype.removeListeners = function () {
                 var elWindow = getElementWindow(this.el);
                 this.el.removeEventListener("mouseenter", this.onMouseEnter);
                 this.el.removeEventListener("pointerdown", this.onPointerEvent, true);
@@ -1831,15 +1831,15 @@
                 this.onStopScrolling.cancel();
                 this.onMouseEntered.cancel();
             };
-            SimpleBarCore.prototype.unMount = function() {
+            SimpleBarCore.prototype.unMount = function () {
                 this.removeListeners();
             };
-            SimpleBarCore.prototype.isWithinBounds = function(bbox) {
+            SimpleBarCore.prototype.isWithinBounds = function (bbox) {
                 return this.mouseX >= bbox.left && this.mouseX <= bbox.left + bbox.width && this.mouseY >= bbox.top && this.mouseY <= bbox.top + bbox.height;
             };
-            SimpleBarCore.prototype.findChild = function(el, query) {
+            SimpleBarCore.prototype.findChild = function (el, query) {
                 var matches = el.matches || el.webkitMatchesSelector || el.mozMatchesSelector || el.msMatchesSelector;
-                return Array.prototype.filter.call(el.children, (function(child) {
+                return Array.prototype.filter.call(el.children, (function (child) {
                     return matches.call(child, query);
                 }))[0];
             };
@@ -1878,12 +1878,12 @@
             SimpleBarCore.helpers = helpers;
             return SimpleBarCore;
         }();
-        var extendStatics = function(d, b) {
+        var extendStatics = function (d, b) {
             extendStatics = Object.setPrototypeOf || {
                 __proto__: []
-            } instanceof Array && function(d, b) {
+            } instanceof Array && function (d, b) {
                 d.__proto__ = b;
-            } || function(d, b) {
+            } || function (d, b) {
                 for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p];
             };
             return extendStatics(d, b);
@@ -1897,7 +1897,7 @@
             d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __);
         }
         var _a = SimpleBarCore.helpers, dist_getOptions = _a.getOptions, dist_addClasses = _a.addClasses;
-        var SimpleBar = function(_super) {
+        var SimpleBar = function (_super) {
             __extends(SimpleBar, _super);
             function SimpleBar() {
                 var args = [];
@@ -1906,21 +1906,21 @@
                 SimpleBar.instances.set(args[0], _this);
                 return _this;
             }
-            SimpleBar.initDOMLoadedElements = function() {
+            SimpleBar.initDOMLoadedElements = function () {
                 document.removeEventListener("DOMContentLoaded", this.initDOMLoadedElements);
                 window.removeEventListener("load", this.initDOMLoadedElements);
-                Array.prototype.forEach.call(document.querySelectorAll("[data-simplebar]"), (function(el) {
+                Array.prototype.forEach.call(document.querySelectorAll("[data-simplebar]"), (function (el) {
                     if (el.getAttribute("data-simplebar") !== "init" && !SimpleBar.instances.has(el)) new SimpleBar(el, dist_getOptions(el.attributes));
                 }));
             };
-            SimpleBar.removeObserver = function() {
+            SimpleBar.removeObserver = function () {
                 var _a;
                 (_a = SimpleBar.globalObserver) === null || _a === void 0 ? void 0 : _a.disconnect();
             };
-            SimpleBar.prototype.initDOM = function() {
+            SimpleBar.prototype.initDOM = function () {
                 var _this = this;
                 var _a, _b, _c;
-                if (!Array.prototype.filter.call(this.el.children, (function(child) {
+                if (!Array.prototype.filter.call(this.el.children, (function (child) {
                     return child.classList.contains(_this.classNames.wrapper);
                 })).length) {
                     this.wrapperEl = document.createElement("div");
@@ -1968,11 +1968,11 @@
                 SimpleBarCore.prototype.initDOM.call(this);
                 this.el.setAttribute("data-simplebar", "init");
             };
-            SimpleBar.prototype.unMount = function() {
+            SimpleBar.prototype.unMount = function () {
                 SimpleBarCore.prototype.unMount.call(this);
                 SimpleBar.instances["delete"](this.el);
             };
-            SimpleBar.initHtmlApi = function() {
+            SimpleBar.initHtmlApi = function () {
                 this.initDOMLoadedElements = this.initDOMLoadedElements.bind(this);
                 if (typeof MutationObserver !== "undefined") {
                     this.globalObserver = new MutationObserver(SimpleBar.handleMutations);
@@ -1986,15 +1986,15 @@
                     window.addEventListener("load", this.initDOMLoadedElements);
                 }
             };
-            SimpleBar.handleMutations = function(mutations) {
-                mutations.forEach((function(mutation) {
-                    mutation.addedNodes.forEach((function(addedNode) {
-                        if (addedNode.nodeType === 1) if (addedNode.hasAttribute("data-simplebar")) !SimpleBar.instances.has(addedNode) && document.documentElement.contains(addedNode) && new SimpleBar(addedNode, dist_getOptions(addedNode.attributes)); else addedNode.querySelectorAll("[data-simplebar]").forEach((function(el) {
+            SimpleBar.handleMutations = function (mutations) {
+                mutations.forEach((function (mutation) {
+                    mutation.addedNodes.forEach((function (addedNode) {
+                        if (addedNode.nodeType === 1) if (addedNode.hasAttribute("data-simplebar")) !SimpleBar.instances.has(addedNode) && document.documentElement.contains(addedNode) && new SimpleBar(addedNode, dist_getOptions(addedNode.attributes)); else addedNode.querySelectorAll("[data-simplebar]").forEach((function (el) {
                             if (el.getAttribute("data-simplebar") !== "init" && !SimpleBar.instances.has(el) && document.documentElement.contains(el)) new SimpleBar(el, dist_getOptions(el.attributes));
                         }));
                     }));
-                    mutation.removedNodes.forEach((function(removedNode) {
-                        if (removedNode.nodeType === 1) if (removedNode.getAttribute("data-simplebar") === "init") SimpleBar.instances.has(removedNode) && !document.documentElement.contains(removedNode) && SimpleBar.instances.get(removedNode).unMount(); else Array.prototype.forEach.call(removedNode.querySelectorAll('[data-simplebar="init"]'), (function(el) {
+                    mutation.removedNodes.forEach((function (removedNode) {
+                        if (removedNode.nodeType === 1) if (removedNode.getAttribute("data-simplebar") === "init") SimpleBar.instances.has(removedNode) && !document.documentElement.contains(removedNode) && SimpleBar.instances.get(removedNode).unMount(); else Array.prototype.forEach.call(removedNode.querySelectorAll('[data-simplebar="init"]'), (function (el) {
                             SimpleBar.instances.has(el) && !document.documentElement.contains(el) && SimpleBar.instances.get(el).unMount();
                         }));
                     }));
@@ -2013,7 +2013,7 @@
         setTimeout((() => {
             if (addWindowScrollEvent) {
                 let windowScroll = new Event("windowScroll");
-                window.addEventListener("scroll", (function(e) {
+                window.addEventListener("scroll", (function (e) {
                     document.dispatchEvent(windowScroll);
                 }));
             }
@@ -2025,7 +2025,7 @@
             init() {
                 this.оbjects = [];
                 this.daClassname = "_dynamic_adapt_";
-                this.nodes = [ ...document.querySelectorAll("[data-da]") ];
+                this.nodes = [...document.querySelectorAll("[data-da]")];
                 this.nodes.forEach((node => {
                     const data = node.dataset.da.trim();
                     const dataArray = data.split(",");
@@ -2039,12 +2039,12 @@
                     this.оbjects.push(оbject);
                 }));
                 this.arraySort(this.оbjects);
-                this.mediaQueries = this.оbjects.map((({breakpoint}) => `(${this.type}-width: ${breakpoint}px),${breakpoint}`)).filter(((item, index, self) => self.indexOf(item) === index));
+                this.mediaQueries = this.оbjects.map((({ breakpoint }) => `(${this.type}-width: ${breakpoint}px),${breakpoint}`)).filter(((item, index, self) => self.indexOf(item) === index));
                 this.mediaQueries.forEach((media => {
                     const mediaSplit = media.split(",");
                     const matchMedia = window.matchMedia(mediaSplit[0]);
                     const mediaBreakpoint = mediaSplit[1];
-                    const оbjectsFilter = this.оbjects.filter((({breakpoint}) => breakpoint === mediaBreakpoint));
+                    const оbjectsFilter = this.оbjects.filter((({ breakpoint }) => breakpoint === mediaBreakpoint));
                     matchMedia.addEventListener("change", (() => {
                         this.mediaHandler(matchMedia, оbjectsFilter);
                     }));
@@ -2054,7 +2054,7 @@
             mediaHandler(matchMedia, оbjects) {
                 if (matchMedia.matches) оbjects.forEach((оbject => {
                     this.moveTo(оbject.place, оbject.element, оbject.destination);
-                })); else оbjects.forEach((({parent, element, index}) => {
+                })); else оbjects.forEach((({ parent, element, index }) => {
                     if (element.classList.contains(this.daClassname)) this.moveBack(parent, element, index);
                 }));
             }
@@ -2075,7 +2075,7 @@
                 if (parent.children[index] !== void 0) parent.children[index].before(element); else parent.append(element);
             }
             indexInParent(parent, element) {
-                return [ ...parent.children ].indexOf(element);
+                return [...parent.children].indexOf(element);
             }
             arraySort(arr) {
                 if (this.type === "min") arr.sort(((a, b) => {
@@ -2103,7 +2103,7 @@
         const da = new DynamicAdapt("max");
         da.init();
         const filter = document.querySelector(".mobile-merchants__filter");
-        if (filter) filter.addEventListener("click", (function() {
+        if (filter) filter.addEventListener("click", (function () {
             const filterBody = document.querySelector(".search-merchants");
             _slideToggle(filterBody);
         }));
@@ -2111,7 +2111,7 @@
         if (filterInvoices) {
             const filterBody = document.querySelector(".filter-invoices__form");
             _slideUp(filterBody);
-            filterInvoices.addEventListener("click", (function() {
+            filterInvoices.addEventListener("click", (function () {
                 _slideToggle(filterBody);
             }));
         }
@@ -2119,16 +2119,27 @@
         if (filterPayment) {
             const filterBody = document.querySelector(".filter-payments-list__form");
             _slideUp(filterBody);
-            filterPayment.addEventListener("click", (function() {
+            filterPayment.addEventListener("click", (function () {
                 _slideToggle(filterBody);
             }));
         }
         const allPrivilegesCheckbox = document.getElementById('b_1');
         const privilegesCheckboxes = document.querySelectorAll('.privileges-popup__items input[type="checkbox"]');
-        if(allPrivilegesCheckbox && privilegesCheckboxes){
-            allPrivilegesCheckbox.addEventListener('change', function() {
+        if (allPrivilegesCheckbox && privilegesCheckboxes) {
+            allPrivilegesCheckbox.addEventListener('change', function () {
                 const isChecked = allPrivilegesCheckbox.checked;
-                privilegesCheckboxes.forEach(function(checkbox) {
+                privilegesCheckboxes.forEach(function (checkbox) {
+                    checkbox.checked = isChecked;
+                });
+            });
+        }
+
+        const allPrivilegesCheckbox_ = document.getElementById('b_b_1');
+        const privilegesCheckboxes_ = document.querySelectorAll('.privileges-popup__items input[type="checkbox"]');
+        if (allPrivilegesCheckbox_ && privilegesCheckboxes_) {
+            allPrivilegesCheckbox_.addEventListener('change', function () {
+                const isChecked = allPrivilegesCheckbox_.checked;
+                privilegesCheckboxes_.forEach(function (checkbox) {
                     checkbox.checked = isChecked;
                 });
             });
@@ -2136,108 +2147,170 @@
 
         var copyButtons = document.querySelectorAll('.copyButton');
 
-        copyButtons.forEach(function(copyButton) {
-        copyButton.addEventListener('click', function() {
-            var copyBlock = this.parentNode;
-            var creditKeyText = copyBlock.querySelector('.creditKeyText');
-            var copyStatus = copyBlock.querySelector('.copyStatus');
+        copyButtons.forEach(function (copyButton) {
+            copyButton.addEventListener('click', function () {
+                var copyBlock = this.parentNode;
+                var creditKeyText = copyBlock.querySelector('.creditKeyText');
+                var copyStatus = copyBlock.querySelector('.copyStatus');
 
-            var textarea = document.createElement('textarea');
-            textarea.value = creditKeyText.textContent;
-            document.body.appendChild(textarea);
+                var textarea = document.createElement('textarea');
+                textarea.value = creditKeyText.textContent;
+                document.body.appendChild(textarea);
 
-            textarea.select();
-            document.execCommand('copy');
+                textarea.select();
+                document.execCommand('copy');
 
-            document.body.removeChild(textarea);
+                document.body.removeChild(textarea);
 
-            copyStatus.classList.add('_show');
+                copyStatus.classList.add('_show');
 
-            setTimeout(function() {
-                copyStatus.classList.remove('_show');
-            }, 2000);
+                setTimeout(function () {
+                    copyStatus.classList.remove('_show');
+                }, 2000);
+            });
         });
-        });
 
 
-        window.addEventListener('DOMContentLoaded', function() {
+        window.addEventListener('DOMContentLoaded', function () {
             var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
             var paymentsListBody = document.querySelector('.payments-list__body');
             var isPaymentsListBodyRemoved = false;
-      
+
             function removePaymentsListBody() {
-              if (paymentsListBody && !isPaymentsListBodyRemoved) {
-                paymentsListBody.parentNode.removeChild(paymentsListBody);
-                isPaymentsListBodyRemoved = true;
-              }
+                if (paymentsListBody && !isPaymentsListBodyRemoved) {
+                    paymentsListBody.parentNode.removeChild(paymentsListBody);
+                    isPaymentsListBodyRemoved = true;
+                }
             }
-      
+
             function restorePaymentsListBody() {
-              if (isPaymentsListBodyRemoved) {
-                var newPaymentsListBody = document.createElement('div');
-                newPaymentsListBody.className = 'payments-list__body';
-                document.body.insertBefore(newPaymentsListBody, document.querySelector('.payments-list__nav'));
-      
-                isPaymentsListBodyRemoved = false;
-              }
+                if (isPaymentsListBodyRemoved) {
+                    var newPaymentsListBody = document.createElement('div');
+                    newPaymentsListBody.className = 'payments-list__body';
+                    document.body.insertBefore(newPaymentsListBody, document.querySelector('.payments-list__nav'));
+
+                    isPaymentsListBodyRemoved = false;
+                }
             }
-      
+
             function handleWindowResize() {
-              screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-      
-              if (screenWidth < 768) {
-                removePaymentsListBody();
-              } else {
-                restorePaymentsListBody();
-              }
+                screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+
+                if (screenWidth < 768) {
+                    removePaymentsListBody();
+                } else {
+                    restorePaymentsListBody();
+                }
             }
-      
+
             window.addEventListener('resize', handleWindowResize);
             handleWindowResize();
-          });
+        });
 
         var mobileListPayment = document.querySelector('.mobile-list-payment');
-        if(mobileListPayment){
+        if (mobileListPayment) {
             var windowWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
             if (windowWidth > 768) {
                 mobileListPayment.parentNode.removeChild(mobileListPayment);
             }
         }
-
-            // Получаем все кнопки копирования
-            const copy = document.querySelectorAll('.requests-merchans__copy');
-
-            // Добавляем обработчик события на каждую кнопку
-            copy.forEach(buttonCopy => {
-                buttonCopy.addEventListener('click', () => {
-                // Находим родительский блок, содержащий текст для копирования
+        const copy = document.querySelectorAll('.requests-merchans__copy');
+        copy.forEach(buttonCopy => {
+            buttonCopy.addEventListener('click', () => {
                 const parentBlock = buttonCopy.closest('.requests-merchans__item');
-                
-                // Находим текст для копирования
                 const textToCopy = parentBlock.querySelector('.requests-merchans__copy .equests-merchans__cod').textContent.trim();
-                
-                // Создаем временный элемент textarea для копирования текста
+
                 const tempTextarea = document.createElement('textarea');
                 tempTextarea.value = textToCopy;
                 document.body.appendChild(tempTextarea);
-                
-                // Копируем текст в буфер обмена
                 tempTextarea.select();
                 document.execCommand('copy');
-                
-                // Удаляем временный элемент textarea
                 document.body.removeChild(tempTextarea);
-                
-                // Показываем сообщение "Скопировано"
+
                 const copiedSpan = parentBlock.querySelector('.requests-merchans__copy .cop');
                 copiedSpan.classList.add('_show');
-                
-                // Скрываем сообщение "Скопировано" через 2 секунды
+
                 setTimeout(() => {
                     copiedSpan.classList.remove('_show');
                 }, 2000);
             });
+        });
+
+
+
+
+        const langs = document.querySelectorAll('.langs-header');
+
+        // Функция для проверки, является ли элемент потомком другого элемента
+        function isDescendant(parent, child) {
+            let node = child.parentNode;
+            while (node !== null) {
+                if (node === parent) {
+                    return true;
+                }
+                node = node.parentNode;
+            }
+            return false;
+        }
+
+        // Обработчик клика на всем документе
+        document.addEventListener('click', function (e) {
+            const langLists = document.querySelectorAll('.langs-header__list');
+            langLists.forEach(langList => {
+                if (!isDescendant(langList.parentNode, e.target)) {
+                    langList.classList.remove('_active');
+                }
             });
+        });
+
+        for (let index = 0; index < langs.length; index++) {
+            const lang = langs[index];
+            const langSelected = lang.querySelector('.langs-header__selected');
+            const langList = lang.querySelector('.langs-header__list');
+            const langItem = lang.querySelectorAll('.langs-header__lang');
+            const langClose = lang.querySelector('.langs-header__list-close');
+            langItem.forEach(item => {
+                const abr = item.getAttribute('data-lang');
+                item.addEventListener('click', function () {
+                    langItem.forEach(item => {
+                        item.classList.remove('_active');
+                    });
+                    this.classList.add('_active');
+                    langSelected.textContent = abr;
+                    if (window.innerWidth <= 768) {
+                        langList.classList.remove('_active');
+                    }
+                });
+            });
+            if (window.innerWidth <= 768) {
+                langSelected.addEventListener('click', function (e) {
+                    langList.classList.toggle('_active');
+                    e.stopPropagation(); // Остановить всплытие события, чтобы оно не сработало на document
+                });
+                langClose.addEventListener('click', function (e) {
+                    langList.classList.remove('_active');
+                    e.stopPropagation(); // Остановить всплытие события, чтобы оно не сработало на document
+                });
+            }
+        }
+
+
+        //========================================================================================================================================================
+        const inviceMobile = document.querySelectorAll('.mobile-history__block')
+        for (let i = 0; i < inviceMobile.length; i++) {
+            const invcBlock = inviceMobile[i];
+            const invcBody = invcBlock.querySelector('.mobile-history__body')
+            const invcMore = invcBlock.querySelector('.mobile-history__more')
+            const invcHead = invcBlock.querySelector('.mobile-history__head')
+            const invcRow = invcBlock.querySelector('.mobile-history__row-sum')
+            _slideUp(invcBody)
+            invcMore.addEventListener('click', function () {
+                _slideToggle(invcBody)
+                invcMore.classList.toggle('_active')
+                invcHead.classList.toggle('_active')
+                invcRow.classList.toggle('_active')
+            })
+        }
 
 
 

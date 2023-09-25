@@ -1,0 +1,526 @@
+<!DOCTYPE html
+   PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <title>Код подтверждения</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <style>
+      body {
+         width: 100% !important;
+         -webkit-text-size-adjust: 100%;
+         -ms-text-size-adjust: 100%;
+         margin: 0;
+         padding: 0;
+         line-height: 100%;
+         font-family: Gilroy;
+         background: #F7F9F8;
+      }
+
+      @font-face {
+         font-family: Gilroy;
+         font-display: swap;
+         src: url("./fonts/Gilroy-Bold.woff2") format("woff2"), url("./fonts/Gilroy-Bold.woff") format("woff");
+         font-weight: 700;
+         font-style: normal;
+      }
+
+      @font-face {
+         font-family: Gilroy;
+         font-display: swap;
+         src: url("./fonts/Gilroy-SemiBold.woff2") format("woff2"), url("./fonts/Gilroy-SemiBold.woff") format("woff");
+         font-weight: 600;
+         font-style: normal;
+      }
+
+      @font-face {
+         font-family: Gilroy;
+         font-display: swap;
+         src: url("./fonts/Gilroy-Regular.woff2") format("woff2"), url("./fonts/Gilroy-Regular.woff") format("woff");
+         font-weight: 400;
+         font-style: normal;
+      }
+
+      [style*="Gilroy"] {
+         font-family: 'Gilroy', sans-serif !important;
+      }
+
+      img {
+         outline: none;
+         text-decoration: none;
+         border: none;
+         -ms-interpolation-mode: bicubic;
+         max-width: 100% !important;
+         margin: 0;
+         padding: 0;
+         display: block;
+      }
+
+      table td {
+         border-collapse: collapse;
+      }
+
+      table {
+         border-collapse: collapse;
+         mso-table-lspace: 0pt;
+         mso-table-rspace: 0pt;
+      }
+
+      /*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+      .logo {
+         background-color: #004231;
+         padding: 48px 32px;
+      }
+
+      .logo img {
+         width: 230px;
+         height: auto;
+      }
+
+      .content {
+         margin-bottom: 200px;
+         margin-top: 100px;
+         padding: 0 15px;
+      }
+
+      .content__inner {
+         max-width: 624px;
+         margin-left: auto;
+         margin-right: auto;
+         padding: 32px 56px;
+         border-radius: 5px;
+         background: #FFF;
+         -webkit-box-shadow: 0px 0px 0px 0px rgba(34, 27, 62, 0.10), 0px 18px 39px 0px rgba(34, 27, 62, 0.10), 0px 72px 72px 0px rgba(34, 27, 62, 0.09), 0px 161px 97px 0px rgba(34, 27, 62, 0.05), 0px 286px 114px 0px rgba(34, 27, 62, 0.01), 0px 447px 125px 0px rgba(34, 27, 62, 0.00);
+         box-shadow: 0px 0px 0px 0px rgba(34, 27, 62, 0.10), 0px 18px 39px 0px rgba(34, 27, 62, 0.10), 0px 72px 72px 0px rgba(34, 27, 62, 0.09), 0px 161px 97px 0px rgba(34, 27, 62, 0.05), 0px 286px 114px 0px rgba(34, 27, 62, 0.01), 0px 447px 125px 0px rgba(34, 27, 62, 0.00);
+      }
+
+      .content__head {
+         display: -webkit-box;
+         display: -ms-flexbox;
+         display: flex;
+         -ms-flex-wrap: wrap;
+         flex-wrap: wrap;
+         gap: 4px;
+         -webkit-box-align: center;
+         -ms-flex-align: center;
+         align-items: center;
+         -webkit-box-pack: justify;
+         -ms-flex-pack: justify;
+         justify-content: space-between;
+         margin-bottom: 32px;
+      }
+
+      .head__title {
+         color: #152521;
+         font-size: 24px;
+         font-weight: 700;
+         display: block;
+         line-height: 110%;
+         margin: 0;
+      }
+
+      .head__time {
+         color: #536460;
+         font-size: 14px;
+      }
+
+      .content__grid {
+         display: -ms-grid;
+         display: grid;
+         -ms-grid-columns: (1fr)[2];
+         grid-template-columns: repeat(2, 1fr);
+      }
+
+      .column__title {
+         color: #152521;
+         font-size: 18px;
+         font-weight: 700;
+         margin-bottom: 16px;
+      }
+
+      .column__block {
+         margin-bottom: 16px;
+      }
+
+      .column__block span {
+         color: #00A023;
+         font-size: 14px;
+         font-weight: 400;
+      }
+
+      .column__label {
+         color: #152521;
+         font-size: 16px;
+         font-weight: 500;
+         margin-bottom: 4px;
+      }
+
+      .desc p {
+         color: #AAC1BC;
+         font-size: 12px;
+         font-weight: 400;
+      }
+
+      .desc a {
+         color: #AAC1BC;
+         font-size: 12px;
+         font-weight: 400;
+         text-decoration: underline;
+      }
+
+      .desc__row {
+         display: -webkit-box;
+         display: -ms-flexbox;
+         display: flex;
+         -webkit-box-align: center;
+         -ms-flex-align: center;
+         align-items: center;
+         -webkit-box-pack: justify;
+         -ms-flex-pack: justify;
+         justify-content: space-between;
+         padding-top: 16px;
+         padding-bottom: 16px;
+         border-bottom: 1px solid #E6EDEB;
+      }
+
+      .desc__row-w {
+         width: 50%;
+         margin-left: auto;
+      }
+
+      .desc__row-last {
+         border-bottom: none;
+      }
+
+      .desc__label-gray {
+         color: rgba(21, 37, 33, 0.40);
+      }
+
+      .desc__label {
+         color: #152521;
+         font-size: 18px;
+         font-weight: 500;
+      }
+
+      .desc__grid {
+         display: -ms-grid;
+         display: grid;
+         -ms-grid-columns: (1fr)[2];
+         grid-template-columns: repeat(2, 1fr);
+         -webkit-box-align: end;
+         -ms-flex-align: end;
+         align-items: end;
+      }
+
+      .result__date {
+         color: #152521;
+         font-size: 14px;
+         font-weight: 700;
+         margin-bottom: 15px;
+      }
+
+      .result__sum {
+         display: -webkit-box;
+         display: -ms-flexbox;
+         display: flex;
+         -webkit-box-align: end;
+         -ms-flex-align: end;
+         align-items: end;
+         white-space: nowrap;
+
+         color: #152521;
+         font-size: 32px;
+         font-weight: 700;
+      }
+
+      .result__sum span {
+         font-size: 16px;
+         font-weight: 700;
+         margin-bottom: -4px;
+      }
+
+      .result__sum p {
+         color: #152521;
+         font-size: 16px;
+         font-weight: 500;
+         margin: 0;
+         margin-bottom: -4px;
+         margin-left: 4px;
+      }
+
+      .result__carts {
+         display: -webkit-box;
+         display: -ms-flexbox;
+         display: flex;
+         -ms-flex-wrap: wrap;
+         flex-wrap: wrap;
+         -webkit-box-align: center;
+         -ms-flex-align: center;
+         align-items: center;
+         gap: 8px;
+         margin-top: 20px;
+      }
+
+      .result__cart img {
+         width: 32px;
+         height: 24px;
+      }
+
+      .desc__label-bold {
+         font-weight: 600;
+      }
+
+      .desc__button {
+         margin-top: 16px;
+         border-radius: 5px;
+         background: #00A023;
+         border: none;
+         width: 100%;
+         padding: 15px;
+
+         color: #FFF;
+         font-size: 16px;
+         font-weight: 600;
+         display: block;
+         cursor: pointer;
+      }
+
+      @media(max-width: 768px) {
+         .content {
+            margin-top: 16px;
+            margin-bottom: 16px;
+         }
+
+         .content__inner {
+            -webkit-box-shadow: none;
+            box-shadow: none;
+         }
+
+         .logo {
+            padding: 12px;
+         }
+
+         .logo img {
+            width: 100px;
+         }
+
+         .content__inner {
+            padding: 24px 16px;
+         }
+
+         .head__title {
+            font-size: 16px;
+         }
+
+         .head__time {
+            font-size: 12px;
+         }
+
+         .content__head {
+            margin-bottom: 20px;
+         }
+
+         .content__grid {
+            -ms-grid-columns: 1fr;
+            grid-template-columns: 1fr;
+         }
+
+         .column__title {
+            font-size: 14px;
+            margin-bottom: 8px;
+         }
+
+         .column__label {
+            font-size: 12px;
+         }
+
+         .column__block span {
+            font-size: 11px;
+         }
+
+         .desc__grid {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+         }
+
+         .desc__row {
+            padding-top: 8px;
+            padding-bottom: 8px;
+         }
+
+         .desc__row-w {
+            width: 100%;
+         }
+
+         .desc__label-gray {
+            font-size: 11px;
+         }
+
+         .desc__label {
+            font-size: 12px;
+         }
+
+         .desc__row-last {
+            font-size: 14px;
+         }
+
+         .result__sum {
+            font-size: 22px;
+         }
+
+         .result__sum span {
+            font-size: 14px;
+            margin-bottom: -2px;
+         }
+
+         .result__sum p {
+            font-size: 14px;
+            margin-bottom: -2px;
+         }
+
+         .desc__result {
+            width: 100%;
+            text-align: right;
+
+         }
+
+         .result__sum {
+            -webkit-box-pack: end;
+            -ms-flex-pack: end;
+            justify-content: flex-end;
+         }
+
+         .result__date {
+            font-size: 12px;
+            font-weight: 600;
+         }
+
+         .result__carts {
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+         }
+
+         .result__cart img {
+            width: 45px;
+            height: 30px;
+         }
+
+         .desc__button {
+            font-size: 13px;
+            padding: 12px;
+         }
+      }
+   </style>
+</head>
+
+<body style="margin: 0; padding: 0;">
+   <div style="font-size:0px;font-color:#ffffff;opacity:0;visibility:hidden;width:0;height:0;display:none;">Тестовое
+      письмо</div>
+   <table cellpadding="0" cellspacing="0" width="100%">
+      <tr>
+         <td class="logo" align="center">
+            <img src="./img/logo-email.svg" alt="Логотип компании" />
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <div class="content">
+               <div class="content__inner">
+                  <div class="content__head">
+                     <h1 class="head__title">Счет для оплаты №293872</h1>
+                     <span class="head__time">Дата создания: 20. 09. 2023</span>
+                  </div>
+                  <div class="content__grid">
+                     <div class="content__column column">
+                        <div class="column__title">От кого</div>
+                        <div class="column__block">
+                           <div class="column__label">Crypto company</div>
+                           <span>crypto-company.com</span>
+                        </div>
+                        <div class="column__block">
+                           <div class="column__label">+380 000 000 00</div>
+                           <span>crypto-company@gmail.com</span>
+                        </div>
+                     </div>
+                     <div class="content__column column">
+                        <div class="column__title">Кому</div>
+                        <div class="column__block">
+                           <div class="column__label">Иванов Иван</div>
+                        </div>
+                        <div class="column__block">
+                           <div class="column__label">+380 000 000 00</div>
+                           <span>i.ivanov@gmail.com</span>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="content__desc desc">
+                     <div class="desc__row">
+                        <span class="desc__label-gray">Описание</span>
+                        <span class="desc__label-gray">Сумма</span>
+                     </div>
+                     <div class="desc__row">
+                        <span class="desc__label">Конвертация валюты</span>
+                        <span class="desc__label">4340.00 USD</span>
+                     </div>
+                     <div class="desc__row desc__row-w">
+                        <span class="desc__label">Комиссия:</span>
+                        <span class="desc__label">0.00 USD</span>
+                     </div>
+                     <div class="desc__row desc__row-w desc__row-last">
+                        <span class="desc__label desc__label-bold">Всего:</span>
+                        <span class="desc__label desc__label-bold">4340.00 USD</span>
+                     </div>
+                     <div class="desc__grid">
+                        <div class="desc__result result">
+                           <div class="result__date">Оплатить до: 26. 09. 2023</div>
+                           <div class="result__sum">4340.<span>00</span>
+                              <p>UAH</p>
+                           </div>
+                           <div class="result__carts">
+                              <div class="result__cart">
+                                 <img src="./img/carts/visa.svg" alt="">
+                              </div>
+                              <div class="result__cart">
+                                 <img src="./img/carts/mastercard.svg" alt="">
+                              </div>
+                              <div class="result__cart">
+                                 <img src="./img/carts/google.svg" alt="">
+                              </div>
+                              <div class="result__cart">
+                                 <img src="./img/carts/apple.svg" alt="">
+                              </div>
+                              <a href="#" class="result__cart">
+                                 <img src="./img/carts/more.svg" alt="">
+                              </a>
+                           </div>
+                        </div>
+                        <div class="desc__payment">
+                           <button type="submit" class="desc__button">Оплатить</button>
+                           <p>Если почтовый клиент не отображает кнопку, перейдите по <a href="#">ссылке</a></p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </td>
+      </tr>
+   </table>
+</body>
+
+</html>
