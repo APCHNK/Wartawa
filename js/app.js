@@ -2303,13 +2303,22 @@
             const invcMore = invcBlock.querySelector('.mobile-history__more')
             const invcHead = invcBlock.querySelector('.mobile-history__head')
             const invcRow = invcBlock.querySelector('.mobile-history__row-sum')
+            invcMore.textContent = 'See more';
+            let isExpanded = false;
             _slideUp(invcBody)
             invcMore.addEventListener('click', function () {
-                _slideToggle(invcBody)
-                invcMore.classList.toggle('_active')
-                invcHead.classList.toggle('_active')
-                invcRow.classList.toggle('_active')
-            })
+                _slideToggle(invcBody);
+                invcMore.classList.toggle('_active');
+                invcHead.classList.toggle('_active');
+                invcRow.classList.toggle('_active');
+                if (isExpanded) {
+                    invcMore.textContent = 'See more';
+                } else {
+                    invcMore.textContent = 'See less';
+                }
+
+                isExpanded = !isExpanded;
+            });
         }
 
 
